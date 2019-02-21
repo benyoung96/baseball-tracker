@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5AC2499221E28E100DE3DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC2498221E28E100DE3DD2 /* AppDelegate.swift */; };
+		B5AC249B221E28E100DE3DD2 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC249A221E28E100DE3DD2 /* ScheduleController.swift */; };
+		B5AC24A1221E28E100DE3DD2 /* baseball__tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5AC249F221E28E100DE3DD2 /* baseball__tracker.xcdatamodeld */; };
+		B5AC24A3221E28E200DE3DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AC24A2221E28E200DE3DD2 /* Assets.xcassets */; };
+		B5AC24A6221E28E200DE3DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC24A4221E28E200DE3DD2 /* LaunchScreen.storyboard */; };
+		B5AC24B1221E28E300DE3DD2 /* baseball__trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC24B0221E28E300DE3DD2 /* baseball__trackerTests.swift */; };
+		B5AC24BC221E28E300DE3DD2 /* baseball__trackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC24BB221E28E300DE3DD2 /* baseball__trackerUITests.swift */; };
+		B5AC24CB221E2F4400DE3DD2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC24CA221E2F4400DE3DD2 /* Coordinator.swift */; };
+		B5AC24CD221E2F9B00DE3DD2 /* ControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC24CC221E2F9B00DE3DD2 /* ControllerType.swift */; };
+		B5AC24D0221E2FF400DE3DD2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC24CF221E2FF400DE3DD2 /* MainCoordinator.swift */; };
+		B5FCE5C8221E675D001FFC66 /* ScheduleItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5C7221E675D001FFC66 /* ScheduleItemModel.swift */; };
+		B5FCE5D7221E67DA001FFC66 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5CB221E67DA001FFC66 /* ParameterEncoding.swift */; };
+		B5FCE5D8221E67DA001FFC66 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5CD221E67DA001FFC66 /* NetworkManager.swift */; };
+		B5FCE5DA221E67DA001FFC66 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5D1221E67DA001FFC66 /* ParameterEncoder.swift */; };
+		B5FCE5DB221E67DB001FFC66 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5D2221E67DA001FFC66 /* NetworkRouter.swift */; };
+		B5FCE5DC221E67DB001FFC66 /* HttpTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5D3221E67DA001FFC66 /* HttpTask.swift */; };
+		B5FCE5DD221E67DB001FFC66 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5D4221E67DA001FFC66 /* HttpMethod.swift */; };
+		B5FCE5DE221E67DB001FFC66 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5D5221E67DA001FFC66 /* Router.swift */; };
+		B5FCE5DF221E67DB001FFC66 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5D6221E67DA001FFC66 /* EndPointType.swift */; };
+		B5FCE5E1221E6892001FFC66 /* ScheduleNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5E0221E6892001FFC66 /* ScheduleNetworkManager.swift */; };
+		B5FCE5E4221E68CB001FFC66 /* ScheduleEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5E3221E68CB001FFC66 /* ScheduleEndPoint.swift */; };
+		B5FCE5E6221E70C4001FFC66 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5E5221E70C4001FFC66 /* ScheduleCell.swift */; };
+		B5FCE5E8221E7CD4001FFC66 /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5E7221E7CD4001FFC66 /* Resuable.swift */; };
+		B5FCE5EB221E7D1C001FFC66 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5EA221E7D1C001FFC66 /* UITableViewCell+Extensions.swift */; };
+		B5FCE5ED221E7E5A001FFC66 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5EC221E7E5A001FFC66 /* UITableView+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5AC24AD221E28E300DE3DD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5AC248D221E28E100DE3DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5AC2494221E28E100DE3DD2;
+			remoteInfo = "baseball- tracker";
+		};
+		B5AC24B8221E28E300DE3DD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5AC248D221E28E100DE3DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5AC2494221E28E100DE3DD2;
+			remoteInfo = "baseball- tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5AC2495221E28E100DE3DD2 /* baseball- tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "baseball- tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AC2498221E28E100DE3DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5AC249A221E28E100DE3DD2 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
+		B5AC24A0221E28E100DE3DD2 /* baseball__tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = baseball__tracker.xcdatamodel; sourceTree = "<group>"; };
+		B5AC24A2221E28E200DE3DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5AC24A5221E28E200DE3DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5AC24A7221E28E200DE3DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AC24AC221E28E300DE3DD2 /* baseball- trackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "baseball- trackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AC24B0221E28E300DE3DD2 /* baseball__trackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseball__trackerTests.swift; sourceTree = "<group>"; };
+		B5AC24B2221E28E300DE3DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AC24B7221E28E300DE3DD2 /* baseball- trackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "baseball- trackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AC24BB221E28E300DE3DD2 /* baseball__trackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseball__trackerUITests.swift; sourceTree = "<group>"; };
+		B5AC24BD221E28E300DE3DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AC24CA221E2F4400DE3DD2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B5AC24CC221E2F9B00DE3DD2 /* ControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerType.swift; sourceTree = "<group>"; };
+		B5AC24CF221E2FF400DE3DD2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B5FCE5C7221E675D001FFC66 /* ScheduleItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemModel.swift; sourceTree = "<group>"; };
+		B5FCE5CB221E67DA001FFC66 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		B5FCE5CD221E67DA001FFC66 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B5FCE5D1221E67DA001FFC66 /* ParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		B5FCE5D2221E67DA001FFC66 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		B5FCE5D3221E67DA001FFC66 /* HttpTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpTask.swift; sourceTree = "<group>"; };
+		B5FCE5D4221E67DA001FFC66 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		B5FCE5D5221E67DA001FFC66 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B5FCE5D6221E67DA001FFC66 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		B5FCE5E0221E6892001FFC66 /* ScheduleNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNetworkManager.swift; sourceTree = "<group>"; };
+		B5FCE5E3221E68CB001FFC66 /* ScheduleEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleEndPoint.swift; sourceTree = "<group>"; };
+		B5FCE5E5221E70C4001FFC66 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		B5FCE5E7221E7CD4001FFC66 /* Resuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resuable.swift; sourceTree = "<group>"; };
+		B5FCE5EA221E7D1C001FFC66 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		B5FCE5EC221E7E5A001FFC66 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5AC2492221E28E100DE3DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AC24A9221E28E300DE3DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AC24B4221E28E300DE3DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5AC248C221E28E100DE3DD2 = {
+			isa = PBXGroup;
+			children = (
+				B5AC2497221E28E100DE3DD2 /* baseball- tracker */,
+				B5AC24AF221E28E300DE3DD2 /* baseball- trackerTests */,
+				B5AC24BA221E28E300DE3DD2 /* baseball- trackerUITests */,
+				B5AC2496221E28E100DE3DD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5AC2496221E28E100DE3DD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5AC2495221E28E100DE3DD2 /* baseball- tracker.app */,
+				B5AC24AC221E28E300DE3DD2 /* baseball- trackerTests.xctest */,
+				B5AC24B7221E28E300DE3DD2 /* baseball- trackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5AC2497221E28E100DE3DD2 /* baseball- tracker */ = {
+			isa = PBXGroup;
+			children = (
+				B5AC24CE221E2FE700DE3DD2 /* Coordinator */,
+				B5AC24D1221E304600DE3DD2 /* Schedule */,
+				B5AC24C9221E2F3100DE3DD2 /* Protocols */,
+				B5FCE5E9221E7D00001FFC66 /* Extensions */,
+				B5FCE5C9221E67DA001FFC66 /* Networking */,
+				B5AC2498221E28E100DE3DD2 /* AppDelegate.swift */,
+				B5AC24A2221E28E200DE3DD2 /* Assets.xcassets */,
+				B5AC24A4221E28E200DE3DD2 /* LaunchScreen.storyboard */,
+				B5AC24A7221E28E200DE3DD2 /* Info.plist */,
+				B5AC249F221E28E100DE3DD2 /* baseball__tracker.xcdatamodeld */,
+			);
+			path = "baseball- tracker";
+			sourceTree = "<group>";
+		};
+		B5AC24AF221E28E300DE3DD2 /* baseball- trackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5AC24B0221E28E300DE3DD2 /* baseball__trackerTests.swift */,
+				B5AC24B2221E28E300DE3DD2 /* Info.plist */,
+			);
+			path = "baseball- trackerTests";
+			sourceTree = "<group>";
+		};
+		B5AC24BA221E28E300DE3DD2 /* baseball- trackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5AC24BB221E28E300DE3DD2 /* baseball__trackerUITests.swift */,
+				B5AC24BD221E28E300DE3DD2 /* Info.plist */,
+			);
+			path = "baseball- trackerUITests";
+			sourceTree = "<group>";
+		};
+		B5AC24C9221E2F3100DE3DD2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B5AC24CA221E2F4400DE3DD2 /* Coordinator.swift */,
+				B5AC24CC221E2F9B00DE3DD2 /* ControllerType.swift */,
+				B5FCE5E7221E7CD4001FFC66 /* Resuable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B5AC24CE221E2FE700DE3DD2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B5AC24CF221E2FF400DE3DD2 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B5AC24D1221E304600DE3DD2 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				B5AC249A221E28E100DE3DD2 /* ScheduleController.swift */,
+				B5FCE5C7221E675D001FFC66 /* ScheduleItemModel.swift */,
+				B5FCE5E5221E70C4001FFC66 /* ScheduleCell.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		B5FCE5C9221E67DA001FFC66 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE5E2221E68BE001FFC66 /* Endpoint */,
+				B5FCE5CA221E67DA001FFC66 /* Encoding */,
+				B5FCE5CC221E67DA001FFC66 /* Manager */,
+				B5FCE5D0221E67DA001FFC66 /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B5FCE5CA221E67DA001FFC66 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE5CB221E67DA001FFC66 /* ParameterEncoding.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		B5FCE5CC221E67DA001FFC66 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE5CD221E67DA001FFC66 /* NetworkManager.swift */,
+				B5FCE5E0221E6892001FFC66 /* ScheduleNetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B5FCE5D0221E67DA001FFC66 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE5D1221E67DA001FFC66 /* ParameterEncoder.swift */,
+				B5FCE5D2221E67DA001FFC66 /* NetworkRouter.swift */,
+				B5FCE5D3221E67DA001FFC66 /* HttpTask.swift */,
+				B5FCE5D4221E67DA001FFC66 /* HttpMethod.swift */,
+				B5FCE5D5221E67DA001FFC66 /* Router.swift */,
+				B5FCE5D6221E67DA001FFC66 /* EndPointType.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B5FCE5E2221E68BE001FFC66 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE5E3221E68CB001FFC66 /* ScheduleEndPoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		B5FCE5E9221E7D00001FFC66 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE5EA221E7D1C001FFC66 /* UITableViewCell+Extensions.swift */,
+				B5FCE5EC221E7E5A001FFC66 /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5AC2494221E28E100DE3DD2 /* baseball- tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AC24C0221E28E300DE3DD2 /* Build configuration list for PBXNativeTarget "baseball- tracker" */;
+			buildPhases = (
+				B5AC2491221E28E100DE3DD2 /* Sources */,
+				B5AC2492221E28E100DE3DD2 /* Frameworks */,
+				B5AC2493221E28E100DE3DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "baseball- tracker";
+			productName = "baseball- tracker";
+			productReference = B5AC2495221E28E100DE3DD2 /* baseball- tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5AC24AB221E28E300DE3DD2 /* baseball- trackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AC24C3221E28E300DE3DD2 /* Build configuration list for PBXNativeTarget "baseball- trackerTests" */;
+			buildPhases = (
+				B5AC24A8221E28E300DE3DD2 /* Sources */,
+				B5AC24A9221E28E300DE3DD2 /* Frameworks */,
+				B5AC24AA221E28E300DE3DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5AC24AE221E28E300DE3DD2 /* PBXTargetDependency */,
+			);
+			name = "baseball- trackerTests";
+			productName = "baseball- trackerTests";
+			productReference = B5AC24AC221E28E300DE3DD2 /* baseball- trackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5AC24B6221E28E300DE3DD2 /* baseball- trackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AC24C6221E28E300DE3DD2 /* Build configuration list for PBXNativeTarget "baseball- trackerUITests" */;
+			buildPhases = (
+				B5AC24B3221E28E300DE3DD2 /* Sources */,
+				B5AC24B4221E28E300DE3DD2 /* Frameworks */,
+				B5AC24B5221E28E300DE3DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5AC24B9221E28E300DE3DD2 /* PBXTargetDependency */,
+			);
+			name = "baseball- trackerUITests";
+			productName = "baseball- trackerUITests";
+			productReference = B5AC24B7221E28E300DE3DD2 /* baseball- trackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5AC248D221E28E100DE3DD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Ben Young";
+				TargetAttributes = {
+					B5AC2494221E28E100DE3DD2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B5AC24AB221E28E300DE3DD2 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B5AC2494221E28E100DE3DD2;
+					};
+					B5AC24B6221E28E300DE3DD2 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B5AC2494221E28E100DE3DD2;
+					};
+				};
+			};
+			buildConfigurationList = B5AC2490221E28E100DE3DD2 /* Build configuration list for PBXProject "baseball- tracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5AC248C221E28E100DE3DD2;
+			productRefGroup = B5AC2496221E28E100DE3DD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5AC2494221E28E100DE3DD2 /* baseball- tracker */,
+				B5AC24AB221E28E300DE3DD2 /* baseball- trackerTests */,
+				B5AC24B6221E28E300DE3DD2 /* baseball- trackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5AC2493221E28E100DE3DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AC24A6221E28E200DE3DD2 /* LaunchScreen.storyboard in Resources */,
+				B5AC24A3221E28E200DE3DD2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AC24AA221E28E300DE3DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AC24B5221E28E300DE3DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5AC2491221E28E100DE3DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FCE5DF221E67DB001FFC66 /* EndPointType.swift in Sources */,
+				B5FCE5D8221E67DA001FFC66 /* NetworkManager.swift in Sources */,
+				B5FCE5C8221E675D001FFC66 /* ScheduleItemModel.swift in Sources */,
+				B5AC24CB221E2F4400DE3DD2 /* Coordinator.swift in Sources */,
+				B5FCE5E6221E70C4001FFC66 /* ScheduleCell.swift in Sources */,
+				B5FCE5D7221E67DA001FFC66 /* ParameterEncoding.swift in Sources */,
+				B5AC24D0221E2FF400DE3DD2 /* MainCoordinator.swift in Sources */,
+				B5FCE5DB221E67DB001FFC66 /* NetworkRouter.swift in Sources */,
+				B5AC249B221E28E100DE3DD2 /* ScheduleController.swift in Sources */,
+				B5FCE5DE221E67DB001FFC66 /* Router.swift in Sources */,
+				B5FCE5E1221E6892001FFC66 /* ScheduleNetworkManager.swift in Sources */,
+				B5FCE5DC221E67DB001FFC66 /* HttpTask.swift in Sources */,
+				B5FCE5E4221E68CB001FFC66 /* ScheduleEndPoint.swift in Sources */,
+				B5FCE5DA221E67DA001FFC66 /* ParameterEncoder.swift in Sources */,
+				B5FCE5E8221E7CD4001FFC66 /* Resuable.swift in Sources */,
+				B5FCE5ED221E7E5A001FFC66 /* UITableView+Extensions.swift in Sources */,
+				B5AC24CD221E2F9B00DE3DD2 /* ControllerType.swift in Sources */,
+				B5FCE5DD221E67DB001FFC66 /* HttpMethod.swift in Sources */,
+				B5AC24A1221E28E100DE3DD2 /* baseball__tracker.xcdatamodeld in Sources */,
+				B5FCE5EB221E7D1C001FFC66 /* UITableViewCell+Extensions.swift in Sources */,
+				B5AC2499221E28E100DE3DD2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AC24A8221E28E300DE3DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AC24B1221E28E300DE3DD2 /* baseball__trackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AC24B3221E28E300DE3DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AC24BC221E28E300DE3DD2 /* baseball__trackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5AC24AE221E28E300DE3DD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5AC2494221E28E100DE3DD2 /* baseball- tracker */;
+			targetProxy = B5AC24AD221E28E300DE3DD2 /* PBXContainerItemProxy */;
+		};
+		B5AC24B9221E28E300DE3DD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5AC2494221E28E100DE3DD2 /* baseball- tracker */;
+			targetProxy = B5AC24B8221E28E300DE3DD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5AC24A4221E28E200DE3DD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5AC24A5221E28E200DE3DD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5AC24BE221E28E300DE3DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5AC24BF221E28E300DE3DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5AC24C1221E28E300DE3DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5666V9N38M;
+				INFOPLIST_FILE = "baseball- tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benyoung.baseball--tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5AC24C2221E28E300DE3DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5666V9N38M;
+				INFOPLIST_FILE = "baseball- tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benyoung.baseball--tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5AC24C4221E28E300DE3DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5666V9N38M;
+				INFOPLIST_FILE = "baseball- trackerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benyoung.baseball--trackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/baseball- tracker.app/baseball- tracker";
+			};
+			name = Debug;
+		};
+		B5AC24C5221E28E300DE3DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5666V9N38M;
+				INFOPLIST_FILE = "baseball- trackerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benyoung.baseball--trackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/baseball- tracker.app/baseball- tracker";
+			};
+			name = Release;
+		};
+		B5AC24C7221E28E300DE3DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5666V9N38M;
+				INFOPLIST_FILE = "baseball- trackerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benyoung.baseball--trackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "baseball- tracker";
+			};
+			name = Debug;
+		};
+		B5AC24C8221E28E300DE3DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5666V9N38M;
+				INFOPLIST_FILE = "baseball- trackerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benyoung.baseball--trackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "baseball- tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5AC2490221E28E100DE3DD2 /* Build configuration list for PBXProject "baseball- tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AC24BE221E28E300DE3DD2 /* Debug */,
+				B5AC24BF221E28E300DE3DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AC24C0221E28E300DE3DD2 /* Build configuration list for PBXNativeTarget "baseball- tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AC24C1221E28E300DE3DD2 /* Debug */,
+				B5AC24C2221E28E300DE3DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AC24C3221E28E300DE3DD2 /* Build configuration list for PBXNativeTarget "baseball- trackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AC24C4221E28E300DE3DD2 /* Debug */,
+				B5AC24C5221E28E300DE3DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AC24C6221E28E300DE3DD2 /* Build configuration list for PBXNativeTarget "baseball- trackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AC24C7221E28E300DE3DD2 /* Debug */,
+				B5AC24C8221E28E300DE3DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B5AC249F221E28E100DE3DD2 /* baseball__tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5AC24A0221E28E100DE3DD2 /* baseball__tracker.xcdatamodel */,
+			);
+			currentVersion = B5AC24A0221E28E100DE3DD2 /* baseball__tracker.xcdatamodel */;
+			path = baseball__tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B5AC248D221E28E100DE3DD2 /* Project object */;
+}
