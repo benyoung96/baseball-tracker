@@ -35,12 +35,14 @@ class ScheduleCell: UITableViewCell {
     let title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = label.font.withSize(18)
         return label
     }()
     
     let date: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = label.font.withSize(14)
         return label
     }()
 }

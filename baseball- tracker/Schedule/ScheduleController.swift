@@ -9,6 +9,7 @@
 import UIKit
 
 class ScheduleController: UITableViewController {
+    weak var coordinator: MainCoordiantor?
     
     private var scheduleItems: [ScheduleItem] = []
     
@@ -70,6 +71,9 @@ extension ScheduleController: ControllerType {
 // MARK: - UITableViewDelegate Methods
 extension ScheduleController {
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.showRoster()
+    }
 }
 
 // MARK: - UITableViewDataSource Methods

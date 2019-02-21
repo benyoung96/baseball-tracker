@@ -19,6 +19,13 @@ class MainCoordiantor: Coordinator {
     func start() {
         let vc = ScheduleController.create() as! ScheduleController
         vc.navigationItem.title = "Yankees"
+        vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func showRoster() {
+        let vc = RosterController.create() as! RosterController
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
 }
