@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 protocol Coordinator {
     var childCoordinators: [Coordinator] { get set }
     var navigationController: UINavigationController { get set }
+    var container: NSPersistentContainer { get set }
     
-    /// <#Description#>
     func start()
 }

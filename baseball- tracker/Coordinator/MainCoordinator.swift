@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class MainCoordiantor: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
+    var container: NSPersistentContainer
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, container: NSPersistentContainer) {
         self.navigationController = navigationController
+        self.container = container
     }
     
     func start() {
