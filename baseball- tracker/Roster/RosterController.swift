@@ -59,6 +59,14 @@ extension RosterController {
     }
 }
 
+// MARK: - Target Actions
+extension RosterController {
+    
+    @objc func submitLineup(_ sender: UIButton) {
+        print("Roster Set")
+    }
+}
+
 // MARK: - ControllerType Methods
 extension RosterController: ControllerType {
     
@@ -72,6 +80,23 @@ extension RosterController: ControllerType {
 // MARK: - UITableViewDelegate Methods
 extension RosterController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
+        if numSelected > 0 || numSelected < 9 {
+            rosterView.updateSubmitText("Select \(9 - numSelected) more Player(s)")
+        }
+        if numSelected == 9 {
+            rosterView.enableSubmit()
+            rosterView.updateSubmitText("Submit Lineup")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
+        if numSelected > 0 || numSelected < 9 {
+            rosterView.updateSubmitText("Select \(9 - numSelected) more Player(s)")
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource Methods

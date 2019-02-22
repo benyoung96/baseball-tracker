@@ -50,9 +50,35 @@ class RosterView: UIView {
     let submit: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Submit Line up", for: .normal)
+        button.setTitle("Select Line up", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .red
+        button.isEnabled = false
+        button.addTarget(self, action: #selector(RosterController.submitLineup(_:)), for: .touchUpInside)
         return button
     }()
+}
+
+// MARK: - Methods to update view
+extension RosterView {
+    
+    func hideSubmit() {
+        submit.isHidden = true
+    }
+    
+    func showSubmit() {
+        submit.isHidden = false
+    }
+    
+    func enableSubmit() {
+        submit.isEnabled = true
+    }
+    
+    func disableSubmit() {
+        submit.isEnabled = false
+    }
+    
+    func updateSubmitText(_ text: String) {
+        submit.setTitle(text, for: .normal)
+    }
 }
