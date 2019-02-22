@@ -62,23 +62,32 @@ class RosterView: UIView {
 // MARK: - Methods to update view
 extension RosterView {
     
-    func hideSubmit() {
-        submit.isHidden = true
-    }
-    
-    func showSubmit() {
-        submit.isHidden = false
-    }
-    
-    func enableSubmit() {
+    private func enableSubmit() {
         submit.isEnabled = true
     }
     
-    func disableSubmit() {
+    private func disableSubmit() {
         submit.isEnabled = false
     }
     
-    func updateSubmitText(_ text: String) {
+    private func updateSubmitText(_ text: String) {
         submit.setTitle(text, for: .normal)
+    }
+    
+    func updateSelected(_ numSelected: Int) {
+        if numSelected > 0 || numSelected < 9 {
+            updateSubmitText("Select \(9 - numSelected) more Player(s)")
+        }
+        if numSelected == 9 {
+            enableSubmit()
+            updateSubmitText("Submit Lineup")
+        }
+    }
+    
+    func updateDeselected(_ numSelected: Int) {
+        if numSelected > 0 || numSelected < 9 {
+            disableSubmit()
+            updateSubmitText("Select \(9 - numSelected) more Player(s)")
+        }
     }
 }

@@ -82,20 +82,12 @@ extension RosterController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        if numSelected > 0 || numSelected < 9 {
-            rosterView.updateSubmitText("Select \(9 - numSelected) more Player(s)")
-        }
-        if numSelected == 9 {
-            rosterView.enableSubmit()
-            rosterView.updateSubmitText("Submit Lineup")
-        }
+        rosterView.updateSelected(numSelected)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        if numSelected > 0 || numSelected < 9 {
-            rosterView.updateSubmitText("Select \(9 - numSelected) more Player(s)")
-        }
+        rosterView.updateDeselected(numSelected)
     }
 }
 
