@@ -12,4 +12,9 @@ struct Player: Codable {
     let number: Int
     let firstName: String
     let lastName: String
+    let team: String
+    
+    func prepareData() -> String {
+        return "\(firstName) \(lastName) - \(number)"
+    }
 }

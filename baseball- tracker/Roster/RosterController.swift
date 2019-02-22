@@ -8,10 +8,12 @@
 
 import UIKit
 
-class RosterController: UITableViewController {
+class RosterController: UIViewController {
     weak var coordinator: MainCoordiantor?
     
     private var players: [Player] = []
+    
+    private var rosterView = RosterView()
 
     private let networkManager: RosterNetworkManager
     
@@ -26,7 +28,7 @@ class RosterController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setupView()
         getRoster()
     }
 }
@@ -34,8 +36,14 @@ class RosterController: UITableViewController {
 // MARK: - Private Methods
 extension RosterController {
     
-    fileprivate func setupTableView() {
+    fileprivate func setupView() {
+        view.backgroundColor = .white
         
+        view.addSubview(rosterView)
+        rosterView.safeAreaFullScreen(to: view)
+        rosterView.tableView.registerCell(PlayerCell.self)
+        rosterView.tableView.delegate = self
+        rosterView.tableView.dataSource = self
     }
     
     fileprivate func getRoster() {
@@ -58,5 +66,24 @@ extension RosterController: ControllerType {
         let networkManager = RosterNetworkManager()
         let vc = RosterController(networkManager)
         return vc
+    }
+}
+
+// MARK: - UITableViewDelegate Methods
+extension RosterController: UITableViewDelegate {
+    
+}
+
+// MARK: - UITableViewDataSource Methods
+extension RosterController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return players.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as PlayerCell
+        cell.playerInfo.text = players[indexPath.item].prepareData()
+        return cell
     }
 }

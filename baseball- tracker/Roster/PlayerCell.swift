@@ -6,4 +6,31 @@
 //  Copyright © 2019 Ben Young. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class PlayerCell: UITableViewCell {
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    fileprivate func setupView() {
+        addSubview(playerInfo)
+        
+        addConstraints([
+            playerInfo.centerXAnchor.constraint(equalTo: centerXAnchor),
+            playerInfo.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+    }
+    
+    let playerInfo: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+}

@@ -36,6 +36,9 @@
 		B5FCE5F2221F0CB4001FFC66 /* RosterEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F1221F0CB4001FFC66 /* RosterEndPoint.swift */; };
 		B5FCE5F4221F0DD2001FFC66 /* RosterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F3221F0DD2001FFC66 /* RosterNetworkManager.swift */; };
 		B5FCE5F6221F0FEB001FFC66 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F5221F0FEB001FFC66 /* PlayerModel.swift */; };
+		B5FCE5FA22205B1C001FFC66 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */; };
+		B5FCE5FC222066CB001FFC66 /* RosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FB222066CB001FFC66 /* RosterView.swift */; };
+		B5FCE5FE222068DD001FFC66 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		B5FCE5F1221F0CB4001FFC66 /* RosterEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEndPoint.swift; sourceTree = "<group>"; };
 		B5FCE5F3221F0DD2001FFC66 /* RosterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterNetworkManager.swift; sourceTree = "<group>"; };
 		B5FCE5F5221F0FEB001FFC66 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		B5FCE5FB222066CB001FFC66 /* RosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterView.swift; sourceTree = "<group>"; };
+		B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +264,7 @@
 			children = (
 				B5FCE5EA221E7D1C001FFC66 /* UITableViewCell+Extensions.swift */,
 				B5FCE5EC221E7E5A001FFC66 /* UITableView+Extensions.swift */,
+				B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -267,6 +274,8 @@
 			children = (
 				B5FCE5EF221F0B6B001FFC66 /* RosterController.swift */,
 				B5FCE5F5221F0FEB001FFC66 /* PlayerModel.swift */,
+				B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */,
+				B5FCE5FB222066CB001FFC66 /* RosterView.swift */,
 			);
 			path = Roster;
 			sourceTree = "<group>";
@@ -404,6 +413,7 @@
 				B5FCE5DF221E67DB001FFC66 /* EndPointType.swift in Sources */,
 				B5FCE5D8221E67DA001FFC66 /* NetworkManager.swift in Sources */,
 				B5FCE5C8221E675D001FFC66 /* ScheduleItemModel.swift in Sources */,
+				B5FCE5FC222066CB001FFC66 /* RosterView.swift in Sources */,
 				B5AC24CB221E2F4400DE3DD2 /* Coordinator.swift in Sources */,
 				B5FCE5F2221F0CB4001FFC66 /* RosterEndPoint.swift in Sources */,
 				B5FCE5E6221E70C4001FFC66 /* ScheduleCell.swift in Sources */,
@@ -413,6 +423,8 @@
 				B5FCE5F4221F0DD2001FFC66 /* RosterNetworkManager.swift in Sources */,
 				B5FCE5F6221F0FEB001FFC66 /* PlayerModel.swift in Sources */,
 				B5FCE5F0221F0B6B001FFC66 /* RosterController.swift in Sources */,
+				B5FCE5FA22205B1C001FFC66 /* PlayerCell.swift in Sources */,
+				B5FCE5FE222068DD001FFC66 /* UIView+Extensions.swift in Sources */,
 				B5AC249B221E28E100DE3DD2 /* ScheduleController.swift in Sources */,
 				B5FCE5DE221E67DB001FFC66 /* Router.swift in Sources */,
 				B5FCE5E1221E6892001FFC66 /* ScheduleNetworkManager.swift in Sources */,

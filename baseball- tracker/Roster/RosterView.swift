@@ -6,4 +6,53 @@
 //  Copyright © 2019 Ben Young. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class RosterView: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        translatesAutoresizingMaskIntoConstraints = false
+        setupViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    fileprivate func setupViews() {
+        addSubview(tableView)
+        addSubview(submit)
+        
+        addConstraints([
+            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            submit.bottomAnchor.constraint(equalTo: bottomAnchor),
+            submit.leadingAnchor.constraint(equalTo: leadingAnchor),
+            submit.trailingAnchor.constraint(equalTo: trailingAnchor),
+            submit.heightAnchor.constraint(equalToConstant: 50),
+            
+            tableView.bottomAnchor.constraint(equalTo: submit.topAnchor)
+        ])
+    }
+    
+    let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableView.allowsMultipleSelection = true
+        tableView.allowsMultipleSelectionDuringEditing = true
+        return tableView
+    }()
+    
+    let submit: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Submit Line up", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .red
+        return button
+    }()
+}
