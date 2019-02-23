@@ -13,11 +13,17 @@ class TeamsController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
     }
 }
 
 // MARK: - Private Methods
-
+extension TeamsController {
+    
+    fileprivate func setupViews() {
+        view.backgroundColor = .red
+    }
+}
 
 // MARK: - ControllerType Methods
 extension TeamsController: ControllerType {
