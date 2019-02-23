@@ -28,8 +28,9 @@ class LineUpController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
-        getRoster()
+        view.backgroundColor = .blue
+//        setupView()
+//        getRoster()
     }
 }
 

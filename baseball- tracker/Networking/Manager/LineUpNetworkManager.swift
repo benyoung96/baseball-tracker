@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RosterNetworkManager {
+struct LineUpNetworkManager {
     private let router = Router<RosterEndPoint>()
     
     func getRoster(_ team: String, completion: @escaping (_ roster: [Player]?, _ error: String?) -> Void) {
