@@ -32,18 +32,21 @@
 		B5FCE5E8221E7CD4001FFC66 /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5E7221E7CD4001FFC66 /* Resuable.swift */; };
 		B5FCE5EB221E7D1C001FFC66 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5EA221E7D1C001FFC66 /* UITableViewCell+Extensions.swift */; };
 		B5FCE5ED221E7E5A001FFC66 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5EC221E7E5A001FFC66 /* UITableView+Extensions.swift */; };
-		B5FCE5F0221F0B6B001FFC66 /* RosterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5EF221F0B6B001FFC66 /* RosterController.swift */; };
+		B5FCE5F0221F0B6B001FFC66 /* LineupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5EF221F0B6B001FFC66 /* LineupController.swift */; };
 		B5FCE5F2221F0CB4001FFC66 /* RosterEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F1221F0CB4001FFC66 /* RosterEndPoint.swift */; };
-		B5FCE5F4221F0DD2001FFC66 /* RosterNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F3221F0DD2001FFC66 /* RosterNetworkManager.swift */; };
+		B5FCE5F4221F0DD2001FFC66 /* LineUpNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F3221F0DD2001FFC66 /* LineUpNetworkManager.swift */; };
 		B5FCE5F6221F0FEB001FFC66 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F5221F0FEB001FFC66 /* PlayerModel.swift */; };
 		B5FCE5FA22205B1C001FFC66 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */; };
-		B5FCE5FC222066CB001FFC66 /* RosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FB222066CB001FFC66 /* RosterView.swift */; };
+		B5FCE5FC222066CB001FFC66 /* LineUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FB222066CB001FFC66 /* LineUpView.swift */; };
 		B5FCE5FE222068DD001FFC66 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */; };
-		B5FCE6072220A1FC001FFC66 /* FavoriteTeamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6062220A1FC001FFC66 /* FavoriteTeamController.swift */; };
+		B5FCE6072220A1FC001FFC66 /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6062220A1FC001FFC66 /* TeamsController.swift */; };
 		B5FCE60A2220AA14001FFC66 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6092220AA14001FFC66 /* Team.swift */; };
 		B5FCE60C2220ACC6001FFC66 /* TeamStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE60B2220ACC6001FFC66 /* TeamStack.swift */; };
 		B5FCE60E2220B139001FFC66 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE60D2220B139001FFC66 /* Managed.swift */; };
 		B5FCE6102220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE60F2220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift */; };
+		B5FCE6142220D23D001FFC66 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6132220D23D001FFC66 /* UserConfig.swift */; };
+		B5FCE6172220D3DD001FFC66 /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6162220D3DD001FFC66 /* OnBoardingController.swift */; };
+		B5FCE61A2220DA09001FFC66 /* RotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6192220DA09001FFC66 /* RotationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,18 +98,21 @@
 		B5FCE5E7221E7CD4001FFC66 /* Resuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resuable.swift; sourceTree = "<group>"; };
 		B5FCE5EA221E7D1C001FFC66 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		B5FCE5EC221E7E5A001FFC66 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
-		B5FCE5EF221F0B6B001FFC66 /* RosterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterController.swift; sourceTree = "<group>"; };
+		B5FCE5EF221F0B6B001FFC66 /* LineupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupController.swift; sourceTree = "<group>"; };
 		B5FCE5F1221F0CB4001FFC66 /* RosterEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEndPoint.swift; sourceTree = "<group>"; };
-		B5FCE5F3221F0DD2001FFC66 /* RosterNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterNetworkManager.swift; sourceTree = "<group>"; };
+		B5FCE5F3221F0DD2001FFC66 /* LineUpNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpNetworkManager.swift; sourceTree = "<group>"; };
 		B5FCE5F5221F0FEB001FFC66 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
-		B5FCE5FB222066CB001FFC66 /* RosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterView.swift; sourceTree = "<group>"; };
+		B5FCE5FB222066CB001FFC66 /* LineUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpView.swift; sourceTree = "<group>"; };
 		B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		B5FCE6062220A1FC001FFC66 /* FavoriteTeamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTeamController.swift; sourceTree = "<group>"; };
+		B5FCE6062220A1FC001FFC66 /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
 		B5FCE6092220AA14001FFC66 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		B5FCE60B2220ACC6001FFC66 /* TeamStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStack.swift; sourceTree = "<group>"; };
 		B5FCE60D2220B139001FFC66 /* Managed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
 		B5FCE60F2220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
+		B5FCE6132220D23D001FFC66 /* UserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
+		B5FCE6162220D3DD001FFC66 /* OnBoardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
+		B5FCE6192220DA09001FFC66 /* RotationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,11 +163,14 @@
 		B5AC2497221E28E100DE3DD2 /* baseball- tracker */ = {
 			isa = PBXGroup;
 			children = (
-				B5FCE6052220A1E1001FFC66 /* Favorite team */,
 				B5AC24CE221E2FE700DE3DD2 /* Coordinator */,
+				B5FCE6152220D3C7001FFC66 /* On Boarding */,
+				B5FCE6052220A1E1001FFC66 /* Teams */,
+				B5FCE5EE221F0B2A001FFC66 /* Line Up */,
+				B5FCE6182220D9F3001FFC66 /* Rotation */,
 				B5AC24D1221E304600DE3DD2 /* Schedule */,
-				B5FCE5EE221F0B2A001FFC66 /* Roster */,
 				B5FCE6082220AA03001FFC66 /* Team */,
+				B5FCE6122220D22C001FFC66 /* Common Models */,
 				B5AC24C9221E2F3100DE3DD2 /* Protocols */,
 				B5FCE5E9221E7D00001FFC66 /* Extensions */,
 				B5FCE5C9221E67DA001FFC66 /* Networking */,
@@ -245,7 +254,7 @@
 			children = (
 				B5FCE5CD221E67DA001FFC66 /* NetworkManager.swift */,
 				B5FCE5E0221E6892001FFC66 /* ScheduleNetworkManager.swift */,
-				B5FCE5F3221F0DD2001FFC66 /* RosterNetworkManager.swift */,
+				B5FCE5F3221F0DD2001FFC66 /* LineUpNetworkManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -283,23 +292,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B5FCE5EE221F0B2A001FFC66 /* Roster */ = {
+		B5FCE5EE221F0B2A001FFC66 /* Line Up */ = {
 			isa = PBXGroup;
 			children = (
-				B5FCE5EF221F0B6B001FFC66 /* RosterController.swift */,
+				B5FCE5EF221F0B6B001FFC66 /* LineupController.swift */,
 				B5FCE5F5221F0FEB001FFC66 /* PlayerModel.swift */,
 				B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */,
-				B5FCE5FB222066CB001FFC66 /* RosterView.swift */,
+				B5FCE5FB222066CB001FFC66 /* LineUpView.swift */,
 			);
-			path = Roster;
+			path = "Line Up";
 			sourceTree = "<group>";
 		};
-		B5FCE6052220A1E1001FFC66 /* Favorite team */ = {
+		B5FCE6052220A1E1001FFC66 /* Teams */ = {
 			isa = PBXGroup;
 			children = (
-				B5FCE6062220A1FC001FFC66 /* FavoriteTeamController.swift */,
+				B5FCE6062220A1FC001FFC66 /* TeamsController.swift */,
 			);
-			path = "Favorite team";
+			path = Teams;
 			sourceTree = "<group>";
 		};
 		B5FCE6082220AA03001FFC66 /* Team */ = {
@@ -309,6 +318,30 @@
 				B5FCE60B2220ACC6001FFC66 /* TeamStack.swift */,
 			);
 			path = Team;
+			sourceTree = "<group>";
+		};
+		B5FCE6122220D22C001FFC66 /* Common Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE6132220D23D001FFC66 /* UserConfig.swift */,
+			);
+			path = "Common Models";
+			sourceTree = "<group>";
+		};
+		B5FCE6152220D3C7001FFC66 /* On Boarding */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE6162220D3DD001FFC66 /* OnBoardingController.swift */,
+			);
+			path = "On Boarding";
+			sourceTree = "<group>";
+		};
+		B5FCE6182220D9F3001FFC66 /* Rotation */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCE6192220DA09001FFC66 /* RotationController.swift */,
+			);
+			path = Rotation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,7 +477,8 @@
 				B5FCE5DF221E67DB001FFC66 /* EndPointType.swift in Sources */,
 				B5FCE5D8221E67DA001FFC66 /* NetworkManager.swift in Sources */,
 				B5FCE5C8221E675D001FFC66 /* ScheduleItemModel.swift in Sources */,
-				B5FCE5FC222066CB001FFC66 /* RosterView.swift in Sources */,
+				B5FCE6172220D3DD001FFC66 /* OnBoardingController.swift in Sources */,
+				B5FCE5FC222066CB001FFC66 /* LineUpView.swift in Sources */,
 				B5AC24CB221E2F4400DE3DD2 /* Coordinator.swift in Sources */,
 				B5FCE5F2221F0CB4001FFC66 /* RosterEndPoint.swift in Sources */,
 				B5FCE5E6221E70C4001FFC66 /* ScheduleCell.swift in Sources */,
@@ -452,10 +486,10 @@
 				B5FCE6102220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift in Sources */,
 				B5AC24D0221E2FF400DE3DD2 /* MainCoordinator.swift in Sources */,
 				B5FCE5DB221E67DB001FFC66 /* NetworkRouter.swift in Sources */,
-				B5FCE5F4221F0DD2001FFC66 /* RosterNetworkManager.swift in Sources */,
+				B5FCE5F4221F0DD2001FFC66 /* LineUpNetworkManager.swift in Sources */,
 				B5FCE5F6221F0FEB001FFC66 /* PlayerModel.swift in Sources */,
-				B5FCE6072220A1FC001FFC66 /* FavoriteTeamController.swift in Sources */,
-				B5FCE5F0221F0B6B001FFC66 /* RosterController.swift in Sources */,
+				B5FCE6072220A1FC001FFC66 /* TeamsController.swift in Sources */,
+				B5FCE5F0221F0B6B001FFC66 /* LineupController.swift in Sources */,
 				B5FCE5FA22205B1C001FFC66 /* PlayerCell.swift in Sources */,
 				B5FCE5FE222068DD001FFC66 /* UIView+Extensions.swift in Sources */,
 				B5AC249B221E28E100DE3DD2 /* ScheduleController.swift in Sources */,
@@ -469,7 +503,9 @@
 				B5FCE5DA221E67DA001FFC66 /* ParameterEncoder.swift in Sources */,
 				B5FCE5E8221E7CD4001FFC66 /* Resuable.swift in Sources */,
 				B5FCE5ED221E7E5A001FFC66 /* UITableView+Extensions.swift in Sources */,
+				B5FCE6142220D23D001FFC66 /* UserConfig.swift in Sources */,
 				B5AC24CD221E2F9B00DE3DD2 /* ControllerType.swift in Sources */,
+				B5FCE61A2220DA09001FFC66 /* RotationController.swift in Sources */,
 				B5FCE5DD221E67DB001FFC66 /* HttpMethod.swift in Sources */,
 				B5AC24A1221E28E100DE3DD2 /* baseball__tracker.xcdatamodeld in Sources */,
 				B5FCE5EB221E7D1C001FFC66 /* UITableViewCell+Extensions.swift in Sources */,

@@ -13,6 +13,7 @@ class MainCoordiantor: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     var container: NSPersistentContainer
+    private let userConfig = UserConfig()
     
     init(navigationController: UINavigationController, container: NSPersistentContainer) {
         self.navigationController = navigationController
@@ -20,14 +21,40 @@ class MainCoordiantor: Coordinator {
     }
     
     func start() {
+        if !userConfig.isFirstBoot() {
+            print("showing on boarding")
+            showOnBoarding()
+        } else {
+            print("showing the schedule")
+            if let team = userConfig.getFavoriteTeam() {
+                showTeamSchedule(team)
+            }
+        }
+    }
+    
+    func showOnBoarding() {
+        let vc = OnBoardingController.create() as! OnBoardingController
+        vc.coordinator = self
+        vc.pages = getOnBoardingControllers()
+        navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func getOnBoardingControllers() -> [UIViewController] {
+        let teams = TeamsController.create() as! TeamsController
+        let lineUp = LineUpController.create() as! LineUpController
+        let rotation = RotationController.create() as! RotationController
+        return [teams, lineUp, rotation]
+    }
+    
+    func showTeamSchedule(_ team: String) {
         let vc = ScheduleController.create() as! ScheduleController
-        vc.navigationItem.title = "Yankees"
+        vc.navigationItem.title = team
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
     
     func showRoster() {
-        let vc = RosterController.create() as! RosterController
+        let vc = LineUpController.create() as! LineUpController
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
