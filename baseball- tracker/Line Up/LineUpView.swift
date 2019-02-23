@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RosterView: UIView {
+class LineUpView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,13 +54,13 @@ class RosterView: UIView {
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .red
         button.isEnabled = false
-        button.addTarget(self, action: #selector(RosterController.submitLineup(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(LineUpController.submitLineup(_:)), for: .touchUpInside)
         return button
     }()
 }
 
 // MARK: - Methods to update view
-extension RosterView {
+extension LineUpView {
     
     private func enableSubmit() {
         submit.isEnabled = true

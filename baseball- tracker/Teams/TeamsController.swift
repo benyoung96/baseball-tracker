@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoriteTeamController: UITableViewController {
+class TeamsController: UITableViewController {
     weak var coordinator: MainCoordiantor?
     
     override func viewDidLoad() {
@@ -20,20 +20,20 @@ class FavoriteTeamController: UITableViewController {
 
 
 // MARK: - ControllerType Methods
-extension FavoriteTeamController: ControllerType {
+extension TeamsController: ControllerType {
     
     static func create() -> UIViewController {
-        let vc = FavoriteTeamController()
+        let vc = TeamsController()
         return vc
     }
 }
 
 // MARK: - UITableViewDelegate Methods
-extension FavoriteTeamController {
+extension TeamsController {
     
 }
 
 // MARK: - UITableViewDataSource Methods
-extension FavoriteTeamController {
+extension TeamsController {
     
 }

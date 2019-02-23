@@ -8,16 +8,16 @@
 
 import UIKit
 
-class RosterController: UIViewController {
+class LineUpController: UIViewController {
     weak var coordinator: MainCoordiantor?
     
     private var players: [Player] = []
     
-    private var rosterView = RosterView()
+    private var lineUpView = LineUpView()
 
-    private let networkManager: RosterNetworkManager
+    private let networkManager: LineUpNetworkManager
     
-    init(_ networkManager: RosterNetworkManager) {
+    init(_ networkManager: LineUpNetworkManager) {
         self.networkManager = networkManager
         super.init(nibName: nil, bundle: nil)
     }
@@ -34,16 +34,16 @@ class RosterController: UIViewController {
 }
 
 // MARK: - Private Methods
-extension RosterController {
+extension LineUpController {
     
     fileprivate func setupView() {
         view.backgroundColor = .white
         
-        view.addSubview(rosterView)
-        rosterView.safeAreaFullScreen(to: view)
-        rosterView.tableView.registerCell(PlayerCell.self)
-        rosterView.tableView.delegate = self
-        rosterView.tableView.dataSource = self
+        view.addSubview(lineUpView)
+        lineUpView.safeAreaFullScreen(to: view)
+        lineUpView.tableView.registerCell(PlayerCell.self)
+        lineUpView.tableView.delegate = self
+        lineUpView.tableView.dataSource = self
     }
     
     fileprivate func getRoster() {
@@ -60,7 +60,7 @@ extension RosterController {
 }
 
 // MARK: - Target Actions
-extension RosterController {
+extension LineUpController {
     
     @objc func submitLineup(_ sender: UIButton) {
         print("Roster Set")
@@ -68,31 +68,31 @@ extension RosterController {
 }
 
 // MARK: - ControllerType Methods
-extension RosterController: ControllerType {
+extension LineUpController: ControllerType {
     
     static func create() -> UIViewController {
-        let networkManager = RosterNetworkManager()
-        let vc = RosterController(networkManager)
+        let networkManager = LineUpNetworkManager()
+        let vc = LineUpController(networkManager)
         return vc
     }
 }
 
 // MARK: - UITableViewDelegate Methods
-extension RosterController: UITableViewDelegate {
+extension LineUpController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        rosterView.updateSelected(numSelected)
+        lineUpView.updateSelected(numSelected)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        rosterView.updateDeselected(numSelected)
+        lineUpView.updateDeselected(numSelected)
     }
 }
 
 // MARK: - UITableViewDataSource Methods
-extension RosterController: UITableViewDataSource {
+extension LineUpController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
