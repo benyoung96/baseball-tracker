@@ -8,8 +8,10 @@
 
 import UIKit
 
-class TeamsController: UITableViewController {
+class TeamsController: UIViewController {
     weak var coordinator: MainCoordiantor?
+    
+    private let teamsView = TeamsView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,16 @@ class TeamsController: UITableViewController {
 extension TeamsController {
     
     fileprivate func setupViews() {
-        view.backgroundColor = .red
+        view.backgroundColor = .teamsBackground
+        view.addSubview(teamsView)
+        teamsView.safeAreaFullScreen(to: view)
+        teamsView.tableView.registerCell(TeamCell.self)
+        teamsView.tableView.delegate = self
+        teamsView.tableView.dataSource = self
+    }
+    
+    fileprivate func fetchTeams() {
+        
     }
 }
 
@@ -35,11 +46,33 @@ extension TeamsController: ControllerType {
 }
 
 // MARK: - UITableViewDelegate Methods
-extension TeamsController {
+extension TeamsController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = .clear
+        return headerView
+    }
 }
 
 // MARK: - UITableViewDataSource Methods
-extension TeamsController {
+extension TeamsController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TeamCell
+        cell.team.text = "New York Yankees"
+        return cell
+    }
 }

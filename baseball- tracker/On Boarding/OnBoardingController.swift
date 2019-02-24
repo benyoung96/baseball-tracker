@@ -12,6 +12,14 @@ class OnBoardingController: UIPageViewController {
     weak var coordinator: MainCoordiantor?
     var pages: [UIViewController]?
     
+    override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
+        super.init(transitionStyle: style, navigationOrientation: navigationOrientation, options: options)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -34,7 +42,7 @@ extension OnBoardingController {
 extension OnBoardingController: ControllerType {
     
     static func create() -> UIViewController {
-        let vc = OnBoardingController()
+        let vc = OnBoardingController(transitionStyle: .scroll, navigationOrientation: .horizontal)
         return vc
     }
 }

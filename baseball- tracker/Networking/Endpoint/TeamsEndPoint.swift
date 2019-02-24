@@ -1,28 +1,25 @@
 //
-//  RosterEndPoint.swift
+//  TeamsEndPoint.swift
 //  baseball- tracker
 //
-//  Created by Ben Young on 2/21/19.
+//  Created by Ben Young on 2/24/19.
 //  Copyright © 2019 Ben Young. All rights reserved.
 //
 
 import Foundation
 
-public enum RosterEndPoint {
-    case getRoster(_ team: String)
+public enum TeamsEndPoint {
+    case getTeams()
 }
 
-extension RosterEndPoint: EndPointType {
+extension TeamsEndPoint: EndPointType {
     
     var baseUrl: URL {
         return URL(string: "http://localhost:8080/")!
     }
     
     var path: String {
-        switch self {
-        case .getRoster(let team):
-            return "api/\(team)/roster"
-        }
+        return "api/teams"
     }
     
     var httpMethod: HttpMethod {

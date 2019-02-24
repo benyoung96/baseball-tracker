@@ -22,11 +22,11 @@ class MainCoordiantor: Coordinator {
     
     func start() {
         if !userConfig.isFirstBoot() {
-            print("showing on boarding")
+            navigationController.isNavigationBarHidden = true
             showOnBoarding()
         } else {
-            print("showing the schedule")
             if let team = userConfig.getFavoriteTeam() {
+                navigationController.isNavigationBarHidden = false
                 showTeamSchedule(team)
             }
         }
@@ -39,7 +39,7 @@ class MainCoordiantor: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func getOnBoardingControllers() -> [UIViewController] {
+    private func getOnBoardingControllers() -> [UIViewController] {
         let teams = TeamsController.create() as! TeamsController
         let lineUp = LineUpController.create() as! LineUpController
         let rotation = RotationController.create() as! RotationController

@@ -32,7 +32,6 @@ struct LineUpNetworkManager {
                     } catch {
                         completion(nil, NetworkResponse.unableToDecode.rawValue)
                     }
-                    
                 case .failure(let networkFailureError):
                     completion(nil, networkFailureError)
                 }
