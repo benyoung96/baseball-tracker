@@ -16,3 +16,4 @@ Baseball tracker is an application that allows a user to keep scoring during a b
  - UIPageViewController
  - Core Data
  - Utilizing extensions to standard library class/protocols 
+ - Coordinator design pattern so handle my applications navigation
