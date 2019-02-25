@@ -13,6 +13,9 @@ class LineUpController: UIViewController {
     weak var coordinator: MainCoordiantor?
     
     private var positionPlayers: [Player] = []
+    private var selectedPlayers: [Player] = []
+    private var team: Team?
+    
     private var lineUpView = LineUpView()
 
     private var networkManager: LineUpNetworkManager
@@ -34,6 +37,19 @@ class LineUpController: UIViewController {
         setupView()
         getRoster()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let name = UserConfig().getFavoriteTeam() ?? ""
+        Team.getTeam(from: container.viewContext, name: name) { (team) in
+            self.team = team.last
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        saveLineUp()
+    }
 }
 
 // MARK: - Private Methods
@@ -50,7 +66,6 @@ extension LineUpController {
     }
     
     fileprivate func getRoster() {
-        networkManager.container = container
         networkManager.getRoster("yankees") { (players, error) in
             if error != nil {
                 print(error as Any)
@@ -61,6 +76,29 @@ extension LineUpController {
                 DispatchQueue.main.async {
                     self.lineUpView.tableView.reloadData()
                 }
+            }
+        }
+    }
+    
+    fileprivate func saveLineUp() {
+        for player in positionPlayers {
+            let contains = selectedPlayers.contains { (selectedPlayer) -> Bool in
+                if selectedPlayer.number == player.number {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            if !contains {
+                selectedPlayers.append(player)
+            }
+        }
+        
+        for (index, player) in selectedPlayers.enumerated() {
+            if index <= 8 {
+                _ = PositionPlayer.insert(into: container.viewContext, player: player, team: team!, lineUpPosition: Int16(index + 1))
+            } else {
+                _ = PositionPlayer.insert(into: container.viewContext, player: player, team: team!, lineUpPosition: 0)
             }
         }
     }
@@ -80,13 +118,15 @@ extension LineUpController: ControllerType {
 extension LineUpController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        print(numSelected)
+        selectedPlayers.append(positionPlayers[indexPath.section])
+        let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+        cell.slot.text = "\(selectedPlayers.count)"
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        print(numSelected)
+        selectedPlayers.remove(at: indexPath.section)
+        let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+        cell.slot.text = ""
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

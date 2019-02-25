@@ -11,8 +11,12 @@ import CoreData
 
 class RotationController: UIViewController {
     weak var coordinator: MainCoordiantor?
+    
     private let rotationView = RotationView()
+    
     private var pitchers: [Player] = []
+    private var selectedPitchers: [Player] = []
+    private var team: Team?
     
     private var networkManager: LineUpNetworkManager
     private let container: NSPersistentContainer
@@ -32,6 +36,14 @@ class RotationController: UIViewController {
         setupViews()
         fetchPitchers()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let name = UserConfig().getFavoriteTeam() ?? ""
+        Team.getTeam(from: container.viewContext, name: name) { (team) in
+            self.team = team.last
+        }
+    }
 }
 
 // MARK: - Private Methods
@@ -47,7 +59,6 @@ extension RotationController {
     }
     
     fileprivate func fetchPitchers() {
-        networkManager.container = container
         networkManager.getRoster("yankees") { (pitchers, error) in
             if error != nil {
                 print(error as Any)
@@ -58,6 +69,29 @@ extension RotationController {
                 DispatchQueue.main.async {
                     self.rotationView.tableView.reloadData()
                 }
+            }
+        }
+    }
+    
+    fileprivate func saveRotation() {
+        for player in pitchers {
+            let contains = selectedPitchers.contains { (selectedPitcher) -> Bool in
+                if selectedPitcher.number == player.number {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            if !contains {
+                selectedPitchers.append(player)
+            }
+        }
+        
+        for (index, player) in selectedPitchers.enumerated() {
+            if index <= 4 {
+                _ = Pitcher.insert(into: container.viewContext, player: player, team: team!, rotationPosition: Int16(index + 1))
+            } else {
+                _ = Pitcher.insert(into: container.viewContext, player: player, team: team!, rotationPosition: 0)
             }
         }
     }
@@ -77,13 +111,15 @@ extension RotationController: ControllerType {
 extension RotationController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        print(numSelected)
+        selectedPitchers.append(pitchers[indexPath.item])
+        let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+        cell.slot.text = "\(selectedPitchers.count)"
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        print(numSelected)
+        selectedPitchers.remove(at: indexPath.item)
+        let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+        cell.slot.text = ""
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

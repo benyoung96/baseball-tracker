@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Player" representedClassName=".Player" syncable="YES">
+    <entity name="Pitcher" representedClassName=".Pitcher" syncable="YES">
         <attribute name="firstName" attributeType="String" syncable="YES"/>
         <attribute name="lastName" attributeType="String" syncable="YES"/>
         <attribute name="number" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rotationPosition" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="pitchers" inverseEntity="Team" syncable="YES"/>
+    </entity>
+    <entity name="PositionPlayer" representedClassName=".PositionPlayer" syncable="YES">
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
+        <attribute name="lineUpPosition" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="number" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="position" attributeType="String" syncable="YES"/>
-        <attribute name="team" attributeType="String" syncable="YES"/>
+        <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="positionPlayers" inverseEntity="Team" syncable="YES"/>
     </entity>
     <entity name="Team" representedClassName=".Team" syncable="YES">
         <attribute name="ballpark" attributeType="String" syncable="YES"/>
         <attribute name="league" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="pitchers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pitcher" inverseName="team" inverseEntity="Pitcher" syncable="YES"/>
+        <relationship name="positionPlayers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PositionPlayer" inverseName="team" inverseEntity="PositionPlayer" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Team" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="Player" positionX="-54" positionY="18" width="128" height="120"/>
+        <element name="Team" positionX="-35.3046875" positionY="-284.95703125" width="128" height="133"/>
+        <element name="PositionPlayer" positionX="-233.30078125" positionY="-82.09765625" width="128" height="133"/>
+        <element name="Pitcher" positionX="155.046875" positionY="-64.55078125" width="128" height="118"/>
     </elements>
 </model>

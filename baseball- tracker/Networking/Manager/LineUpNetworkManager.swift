@@ -10,7 +10,6 @@ import Foundation
 import CoreData
 
 struct LineUpNetworkManager {
-    var container: NSPersistentContainer?
     private let router = Router<RosterEndPoint>()
     
     func getRoster(_ team: String, completion: @escaping (_ roster: [Player]?, _ error: String?) -> Void) {
@@ -29,15 +28,8 @@ struct LineUpNetworkManager {
                     }
                     
                     do {
-                        guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
-                            fatalError("Failed to retrieve context")
-                        }
-                        
-                        let managedObjectContext = self.container?.viewContext
                         let decoder = JSONDecoder()
-                        decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
                         let apiReponse = try decoder.decode([Player].self, from: data)
-                        try self.container?.viewContext.save()
                         completion(apiReponse, nil)
                     } catch {
                         completion(nil, NetworkResponse.unableToDecode.rawValue)

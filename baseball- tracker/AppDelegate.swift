@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         createDataContainer { container in
+            
+            Team.deleteTeams(from: container.viewContext)
+            
             self.persistentContainer = container
             let navController = UINavigationController()
             self.coordinator = MainCoordiantor(navigationController: navController, container: container)

@@ -53,6 +53,8 @@ class TeamsView: UIView {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.backgroundColor = .clear
         tableView.showsVerticalScrollIndicator = false
+        tableView.allowsMultipleSelection = true
+        tableView.allowsMultipleSelectionDuringEditing = true
         return tableView
     }()
     

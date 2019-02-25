@@ -24,16 +24,27 @@ class OnBoardingCell: UITableViewCell {
         backgroundColor = .lightGray
         
         addSubview(title)
+        addSubview(slot)
         addConstraints([
             title.centerXAnchor.constraint(equalTo: centerXAnchor),
-            title.centerYAnchor.constraint(equalTo: centerYAnchor)
+            title.centerYAnchor.constraint(equalTo: centerYAnchor),
+            
+            slot.centerYAnchor.constraint(equalTo: centerYAnchor),
+            slot.rightAnchor.constraint(equalTo: rightAnchor, constant: -10)
         ])
     }
     
     let title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
+        label.textColor = .black
+        return label
+    }()
+    
+    let slot: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
         return label
     }()
 }

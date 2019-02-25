@@ -12,7 +12,8 @@ import CoreData
 class TeamsController: UIViewController {
     weak var coordinator: MainCoordiantor?
     private let teamsView = TeamsView()
-    private var teams: [Team] = []
+    private var teams: [TeamJSON] = []
+    private var selectedTeam: TeamJSON?
     
     private var networkManager: TeamsNetworkManager
     private let container: NSPersistentContainer
@@ -32,6 +33,12 @@ class TeamsController: UIViewController {
         setupViews()
         fetchTeams()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("TeamsView will now be hidden")
+        UserConfig().saveFavoriteTeam(selectedTeam?.name ?? "")
+    }
 }
 
 // MARK: - Private Methods
@@ -47,17 +54,23 @@ extension TeamsController {
     }
     
     fileprivate func fetchTeams() {
-        networkManager.container = container
         networkManager.getTeams { (teams, error) in
             if error != nil {
                 print(error as Any)
             }
             if let teams = teams {
                 self.teams = teams
+                self.saveTeams(teams: teams)
                 DispatchQueue.main.async {
                     self.teamsView.tableView.reloadData()
                 }
             }
+        }
+    }
+    
+    fileprivate func saveTeams(teams: [TeamJSON]) {
+        for team in teams {
+            _ = Team.insert(into: container.viewContext, teamJSON: team)
         }
     }
 }
@@ -74,6 +87,20 @@ extension TeamsController: ControllerType {
 
 // MARK: - UITableViewDelegate Methods
 extension TeamsController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if selectedTeam == nil {
+            selectedTeam = teams[indexPath.item]
+        } else {
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if selectedTeam != nil && selectedTeam!.name == teams[indexPath.item].name {
+            selectedTeam = nil
+        }
+    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10.0
