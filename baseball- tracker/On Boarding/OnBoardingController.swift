@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class OnBoardingController: UIPageViewController {
     weak var coordinator: MainCoordiantor?

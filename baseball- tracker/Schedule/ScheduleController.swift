@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ScheduleController: UITableViewController {
     weak var coordinator: MainCoordiantor?
@@ -14,9 +15,11 @@ class ScheduleController: UITableViewController {
     private var scheduleItems: [ScheduleItem] = []
     
     private var networkManager: ScheduleNetworkManager
+    private let container: NSPersistentContainer
     
-    init(_ networkManager: ScheduleNetworkManager) {
+    init(_ networkManager: ScheduleNetworkManager, _ container: NSPersistentContainer) {
         self.networkManager = networkManager
+        self.container = container
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -61,9 +64,9 @@ extension ScheduleController {
 // MARK: - ControllerType Methods
 extension ScheduleController: ControllerType {
     
-    static func create() -> UIViewController {
+    static func create(_ container: NSPersistentContainer) -> UIViewController {
         let networkManager = ScheduleNetworkManager()
-        let vc = ScheduleController(networkManager)
+        let vc = ScheduleController(networkManager, container)
         return vc
     }
 }

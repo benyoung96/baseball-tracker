@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LineUpController: UIViewController {
     weak var coordinator: MainCoordiantor?
@@ -16,9 +17,11 @@ class LineUpController: UIViewController {
     private var lineUpView = LineUpView()
 
     private let networkManager: LineUpNetworkManager
+    private let container: NSPersistentContainer
     
-    init(_ networkManager: LineUpNetworkManager) {
+    init(_ networkManager: LineUpNetworkManager, _ container: NSPersistentContainer) {
         self.networkManager = networkManager
+        self.container = container
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -71,9 +74,9 @@ extension LineUpController {
 // MARK: - ControllerType Methods
 extension LineUpController: ControllerType {
     
-    static func create() -> UIViewController {
+    static func create(_ container: NSPersistentContainer) -> UIViewController {
         let networkManager = LineUpNetworkManager()
-        let vc = LineUpController(networkManager)
+        let vc = LineUpController(networkManager, container)
         return vc
     }
 }

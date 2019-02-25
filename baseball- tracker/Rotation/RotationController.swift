@@ -7,8 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class RotationController: UIViewController {
+    
+    private let container: NSPersistentContainer
+    
+    init(_ container: NSPersistentContainer) {
+        self.container = container
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +31,8 @@ class RotationController: UIViewController {
 // MARK: - ControllerType Methods
 extension RotationController: ControllerType {
     
-    static func create() -> UIViewController {
-        let vc = RotationController()
+    static func create(_ container: NSPersistentContainer) -> UIViewController {
+        let vc = RotationController(container)
         return vc
     }
 }

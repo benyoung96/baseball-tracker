@@ -51,6 +51,7 @@
 		B5FCEEE3222269E0001FFC66 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE2222269E0001FFC66 /* UIColor+Extensions.swift */; };
 		B5FCEEE522226A55001FFC66 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE422226A55001FFC66 /* TeamCell.swift */; };
 		B5FCEEE722226F46001FFC66 /* TeamsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE622226F46001FFC66 /* TeamsEndPoint.swift */; };
+		B5FCEEEB22236D41001FFC66 /* CodingInfoKey+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		B5FCEEE2222269E0001FFC66 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		B5FCEEE422226A55001FFC66 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		B5FCEEE622226F46001FFC66 /* TeamsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsEndPoint.swift; sourceTree = "<group>"; };
+		B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingInfoKey+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 				B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */,
 				B5FCE60F2220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift */,
 				B5FCEEE2222269E0001FFC66 /* UIColor+Extensions.swift */,
+				B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				B5FCE5DE221E67DB001FFC66 /* Router.swift in Sources */,
 				B5FCE60A2220AA14001FFC66 /* Team.swift in Sources */,
 				B5FCE5E1221E6892001FFC66 /* ScheduleNetworkManager.swift in Sources */,
+				B5FCEEEB22236D41001FFC66 /* CodingInfoKey+Extensions.swift in Sources */,
 				B5FCE5DC221E67DB001FFC66 /* HttpTask.swift in Sources */,
 				B5FCE60E2220B139001FFC66 /* Managed.swift in Sources */,
 				B5FCE5E4221E68CB001FFC66 /* ScheduleEndPoint.swift in Sources */,

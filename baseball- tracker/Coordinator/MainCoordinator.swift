@@ -40,21 +40,21 @@ class MainCoordiantor: Coordinator {
     }
     
     private func getOnBoardingControllers() -> [UIViewController] {
-        let teams = TeamsController.create() as! TeamsController
-        let lineUp = LineUpController.create() as! LineUpController
-        let rotation = RotationController.create() as! RotationController
+        let teams = TeamsController.create(container) as! TeamsController
+        let lineUp = LineUpController.create(container) as! LineUpController
+        let rotation = RotationController.create(container) as! RotationController
         return [teams, lineUp, rotation]
     }
     
     func showTeamSchedule(_ team: String) {
-        let vc = ScheduleController.create() as! ScheduleController
+        let vc = ScheduleController.create(container) as! ScheduleController
         vc.navigationItem.title = team
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
     
     func showRoster() {
-        let vc = LineUpController.create() as! LineUpController
+        let vc = LineUpController.create(container) as! LineUpController
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }

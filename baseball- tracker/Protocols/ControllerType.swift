@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
-protocol ControllerType: class {
+@objc protocol ControllerType: class {
     
     /// Factory function for view controller instatiation
     ///
-    /// - Parameter viewModel: View model object
+    /// - Parameter container: Persistent Core Data Container
     /// - Returns: View controller of concrete type
-    static func create() -> UIViewController
+    @objc optional static func create(_ container: NSPersistentContainer) -> UIViewController
+    
+    @objc optional static func create() -> UIViewController
 }

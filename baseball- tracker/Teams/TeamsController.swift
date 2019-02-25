@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import CoreData
 
 class TeamsController: UIViewController {
     weak var coordinator: MainCoordiantor?
     
     private let teamsView = TeamsView()
+    
+    private let container: NSPersistentContainer
+    
+    init(_ container: NSPersistentContainer) {
+        self.container = container
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +51,8 @@ extension TeamsController {
 // MARK: - ControllerType Methods
 extension TeamsController: ControllerType {
     
-    static func create() -> UIViewController {
-        let vc = TeamsController()
+    static func create(_ container: NSPersistentContainer) -> UIViewController {
+        let vc = TeamsController(container)
         return vc
     }
 }
