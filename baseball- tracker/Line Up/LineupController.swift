@@ -40,7 +40,7 @@ class LineUpController: UIViewController {
 extension LineUpController {
     
     fileprivate func setupView() {
-        view.backgroundColor = .teamsBackground
+        view.backgroundColor = .main
         
         view.addSubview(lineUpView)
         lineUpView.safeAreaFullScreen(to: view)
@@ -90,7 +90,7 @@ extension LineUpController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5.0
+        return 10.0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

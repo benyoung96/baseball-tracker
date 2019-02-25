@@ -8,7 +8,7 @@
 
 import CoreData
 
-func createTeamContainer(completion: @escaping (NSPersistentContainer) -> Void) {
+func createDataContainer(completion: @escaping (NSPersistentContainer) -> Void) {
     let container = NSPersistentContainer(name: "baseball__tracker")
     container.loadPersistentStores { (_, error) in
         guard error == nil else { fatalError("Failed to load store: \(error?.localizedDescription as Any)")}

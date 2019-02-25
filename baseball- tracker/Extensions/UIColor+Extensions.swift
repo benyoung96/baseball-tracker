@@ -10,6 +10,7 @@ import UIKit
 
 extension UIColor  {
     
-    static let teamsBackground = UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0)
+    static let main = UIColor(red:0.16, green:0.18, blue:0.20, alpha:1.0)
+    static let offWhite = UIColor(red:0.76, green:0.76, blue:0.76, alpha:1.0)
     
 }

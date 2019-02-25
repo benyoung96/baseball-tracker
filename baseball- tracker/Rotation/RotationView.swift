@@ -1,14 +1,14 @@
 //
-//  TeamsView.swift
+//  RotationCell.swift
 //  baseball- tracker
 //
-//  Created by Ben Young on 2/23/19.
+//  Created by Ben Young on 2/24/19.
 //  Copyright © 2019 Ben Young. All rights reserved.
 //
 
 import UIKit
 
-class TeamsView: UIView {
+class RotationView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,7 +42,7 @@ class TeamsView: UIView {
     let title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Choose your favorite team"
+        label.text = "Choose your Rotation"
         label.textColor = .white
         return label
     }()
@@ -51,8 +51,10 @@ class TeamsView: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.tableFooterView = UIView(frame: .zero)
-        tableView.backgroundColor = .clear
+        tableView.allowsMultipleSelection = true
+        tableView.allowsMultipleSelectionDuringEditing = true
         tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundColor = .clear
         return tableView
     }()
     

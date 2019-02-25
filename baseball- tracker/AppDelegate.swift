@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        createTeamContainer { container in
+        createDataContainer { container in
             self.persistentContainer = container
             let navController = UINavigationController()
             self.coordinator = MainCoordiantor(navigationController: navController, container: container)

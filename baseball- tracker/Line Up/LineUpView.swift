@@ -34,8 +34,8 @@ class LineUpView: UIView {
             
             tableView.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 10),
             tableView.bottomAnchor.constraint(equalTo: direction.topAnchor, constant: -10),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20)
+            tableView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            tableView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.70)
         ])
     }
     

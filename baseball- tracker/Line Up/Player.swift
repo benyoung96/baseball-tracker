@@ -65,7 +65,7 @@ extension Player: Managed {
     static var defaultPredicates: NSCompoundPredicate? {
         let team = UserConfig().getFavoriteTeam() ?? ""
         let teamPredicate = NSPredicate(format: "team == %@", team)
-        let positionPredicate = NSPredicate(format: "positon != 'P'")
+        let positionPredicate = NSPredicate(format: "position != 'P'")
         return NSCompoundPredicate(type: .and, subpredicates: [teamPredicate, positionPredicate])
     }
     

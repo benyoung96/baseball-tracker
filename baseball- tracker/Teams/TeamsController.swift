@@ -38,7 +38,7 @@ class TeamsController: UIViewController {
 extension TeamsController {
     
     fileprivate func setupViews() {
-        view.backgroundColor = .teamsBackground
+        view.backgroundColor = .main
         view.addSubview(teamsView)
         teamsView.safeAreaFullScreen(to: view)
         teamsView.tableView.registerCell(OnBoardingCell.self)
@@ -52,7 +52,6 @@ extension TeamsController {
             if error != nil {
                 print(error as Any)
             }
-            
             if let teams = teams {
                 self.teams = teams
                 DispatchQueue.main.async {
@@ -77,7 +76,7 @@ extension TeamsController: ControllerType {
 extension TeamsController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5.0
+        return 10.0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -87,7 +86,6 @@ extension TeamsController: UITableViewDelegate {
     }
 }
 
-// MARK: - UITableViewDataSource Methods
 extension TeamsController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

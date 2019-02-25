@@ -40,7 +40,7 @@
 		B5FCE5FE222068DD001FFC66 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */; };
 		B5FCE6072220A1FC001FFC66 /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6062220A1FC001FFC66 /* TeamsController.swift */; };
 		B5FCE60A2220AA14001FFC66 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6092220AA14001FFC66 /* Team.swift */; };
-		B5FCE60C2220ACC6001FFC66 /* TeamStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE60B2220ACC6001FFC66 /* TeamStack.swift */; };
+		B5FCE60C2220ACC6001FFC66 /* DataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE60B2220ACC6001FFC66 /* DataStack.swift */; };
 		B5FCE60E2220B139001FFC66 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE60D2220B139001FFC66 /* Managed.swift */; };
 		B5FCE6102220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE60F2220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift */; };
 		B5FCE6142220D23D001FFC66 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6132220D23D001FFC66 /* UserConfig.swift */; };
@@ -51,7 +51,8 @@
 		B5FCEEE722226F46001FFC66 /* TeamsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE622226F46001FFC66 /* TeamsEndPoint.swift */; };
 		B5FCEEEB22236D41001FFC66 /* CodingInfoKey+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */; };
 		B5FCEEED222372A2001FFC66 /* TeamsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEC222372A2001FFC66 /* TeamsNetworkManager.swift */; };
-		B5FCEEF0222392BB001FFC66 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEF222392BB001FFC66 /* OnBoardingCell.swift */; };
+		B5FCEEF222239A61001FFC66 /* RotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEF122239A61001FFC66 /* RotationView.swift */; };
+		B5FCEEFF2223B81D001FFC66 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEFE2223B81D001FFC66 /* OnBoardingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +112,7 @@
 		B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B5FCE6062220A1FC001FFC66 /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
 		B5FCE6092220AA14001FFC66 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		B5FCE60B2220ACC6001FFC66 /* TeamStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStack.swift; sourceTree = "<group>"; };
+		B5FCE60B2220ACC6001FFC66 /* DataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStack.swift; sourceTree = "<group>"; };
 		B5FCE60D2220B139001FFC66 /* Managed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
 		B5FCE60F2220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
 		B5FCE6132220D23D001FFC66 /* UserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
@@ -122,7 +123,8 @@
 		B5FCEEE622226F46001FFC66 /* TeamsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsEndPoint.swift; sourceTree = "<group>"; };
 		B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingInfoKey+Extensions.swift"; sourceTree = "<group>"; };
 		B5FCEEEC222372A2001FFC66 /* TeamsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsNetworkManager.swift; sourceTree = "<group>"; };
-		B5FCEEEF222392BB001FFC66 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
+		B5FCEEF122239A61001FFC66 /* RotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationView.swift; sourceTree = "<group>"; };
+		B5FCEEFE2223B81D001FFC66 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,12 +181,12 @@
 				B5FCE5EE221F0B2A001FFC66 /* Line Up */,
 				B5FCE6182220D9F3001FFC66 /* Rotation */,
 				B5AC24D1221E304600DE3DD2 /* Schedule */,
-				B5FCE6082220AA03001FFC66 /* Team */,
 				B5FCE6122220D22C001FFC66 /* Common Models */,
 				B5AC24C9221E2F3100DE3DD2 /* Protocols */,
 				B5FCE5E9221E7D00001FFC66 /* Extensions */,
 				B5FCE5C9221E67DA001FFC66 /* Networking */,
 				B5AC2498221E28E100DE3DD2 /* AppDelegate.swift */,
+				B5FCE60B2220ACC6001FFC66 /* DataStack.swift */,
 				B5AC24A2221E28E200DE3DD2 /* Assets.xcassets */,
 				B5AC24A4221E28E200DE3DD2 /* LaunchScreen.storyboard */,
 				B5AC24A7221E28E200DE3DD2 /* Info.plist */,
@@ -310,8 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				B5FCE5EF221F0B6B001FFC66 /* LineupController.swift */,
-				B5FCE5F5221F0FEB001FFC66 /* Player.swift */,
 				B5FCE5FB222066CB001FFC66 /* LineUpView.swift */,
+				B5FCE5F5221F0FEB001FFC66 /* Player.swift */,
 			);
 			path = "Line Up";
 			sourceTree = "<group>";
@@ -321,17 +323,9 @@
 			children = (
 				B5FCE6062220A1FC001FFC66 /* TeamsController.swift */,
 				B5FCEEE022226473001FFC66 /* TeamsView.swift */,
+				B5FCE6092220AA14001FFC66 /* Team.swift */,
 			);
 			path = Teams;
-			sourceTree = "<group>";
-		};
-		B5FCE6082220AA03001FFC66 /* Team */ = {
-			isa = PBXGroup;
-			children = (
-				B5FCE6092220AA14001FFC66 /* Team.swift */,
-				B5FCE60B2220ACC6001FFC66 /* TeamStack.swift */,
-			);
-			path = Team;
 			sourceTree = "<group>";
 		};
 		B5FCE6122220D22C001FFC66 /* Common Models */ = {
@@ -346,7 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				B5FCE6162220D3DD001FFC66 /* OnBoardingController.swift */,
-				B5FCEEEF222392BB001FFC66 /* OnBoardingCell.swift */,
+				B5FCEEFE2223B81D001FFC66 /* OnBoardingCell.swift */,
 			);
 			path = "On Boarding";
 			sourceTree = "<group>";
@@ -355,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				B5FCE6192220DA09001FFC66 /* RotationController.swift */,
+				B5FCEEF122239A61001FFC66 /* RotationView.swift */,
 			);
 			path = Rotation;
 			sourceTree = "<group>";
@@ -490,12 +485,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5FCE5DF221E67DB001FFC66 /* EndPointType.swift in Sources */,
+				B5FCEEF222239A61001FFC66 /* RotationView.swift in Sources */,
 				B5FCE5D8221E67DA001FFC66 /* NetworkManager.swift in Sources */,
 				B5FCE5C8221E675D001FFC66 /* ScheduleItemModel.swift in Sources */,
 				B5FCE6172220D3DD001FFC66 /* OnBoardingController.swift in Sources */,
 				B5FCE5FC222066CB001FFC66 /* LineUpView.swift in Sources */,
 				B5AC24CB221E2F4400DE3DD2 /* Coordinator.swift in Sources */,
-				B5FCEEF0222392BB001FFC66 /* OnBoardingCell.swift in Sources */,
 				B5FCE5F2221F0CB4001FFC66 /* RosterEndPoint.swift in Sources */,
 				B5FCE5E6221E70C4001FFC66 /* ScheduleCell.swift in Sources */,
 				B5FCE5D7221E67DA001FFC66 /* ParameterEncoding.swift in Sources */,
@@ -510,6 +505,7 @@
 				B5FCE5FE222068DD001FFC66 /* UIView+Extensions.swift in Sources */,
 				B5AC249B221E28E100DE3DD2 /* ScheduleController.swift in Sources */,
 				B5FCE5DE221E67DB001FFC66 /* Router.swift in Sources */,
+				B5FCEEFF2223B81D001FFC66 /* OnBoardingCell.swift in Sources */,
 				B5FCE60A2220AA14001FFC66 /* Team.swift in Sources */,
 				B5FCE5E1221E6892001FFC66 /* ScheduleNetworkManager.swift in Sources */,
 				B5FCEEEB22236D41001FFC66 /* CodingInfoKey+Extensions.swift in Sources */,
@@ -517,7 +513,7 @@
 				B5FCE60E2220B139001FFC66 /* Managed.swift in Sources */,
 				B5FCE5E4221E68CB001FFC66 /* ScheduleEndPoint.swift in Sources */,
 				B5FCEEE722226F46001FFC66 /* TeamsEndPoint.swift in Sources */,
-				B5FCE60C2220ACC6001FFC66 /* TeamStack.swift in Sources */,
+				B5FCE60C2220ACC6001FFC66 /* DataStack.swift in Sources */,
 				B5FCE5DA221E67DA001FFC66 /* ParameterEncoder.swift in Sources */,
 				B5FCE5E8221E7CD4001FFC66 /* Resuable.swift in Sources */,
 				B5FCE5ED221E7E5A001FFC66 /* UITableView+Extensions.swift in Sources */,
