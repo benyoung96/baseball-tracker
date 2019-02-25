@@ -12,6 +12,7 @@ import CoreData
 class TeamsController: UIViewController {
     weak var coordinator: MainCoordiantor?
     private let teamsView = TeamsView()
+    private var teams: [Team] = []
     
     private var networkManager: TeamsNetworkManager
     private let container: NSPersistentContainer
@@ -53,7 +54,10 @@ extension TeamsController {
             }
             
             if let teams = teams {
-                print(teams)
+                self.teams = teams
+                DispatchQueue.main.async {
+                    self.teamsView.tableView.reloadData()
+                }
             }
         }
     }
@@ -87,7 +91,7 @@ extension TeamsController: UITableViewDelegate {
 extension TeamsController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return teams.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,7 +100,7 @@ extension TeamsController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TeamCell
-        cell.team.text = "New York Yankees"
+        cell.team.text = teams[indexPath.section].prepareForView()
         return cell
     }
 }

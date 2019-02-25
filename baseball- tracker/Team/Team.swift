@@ -49,6 +49,13 @@ final class Team: NSManagedObject, Codable {
     }
 }
 
+extension Team {
+    
+    func prepareForView() -> String {
+        return "\(location) \(name)"
+    }
+}
+
 extension Team: Managed {
     
     static var defaultSortDescriptors: [NSSortDescriptor] {

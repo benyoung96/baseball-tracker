@@ -35,7 +35,7 @@
 		B5FCE5F0221F0B6B001FFC66 /* LineupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5EF221F0B6B001FFC66 /* LineupController.swift */; };
 		B5FCE5F2221F0CB4001FFC66 /* RosterEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F1221F0CB4001FFC66 /* RosterEndPoint.swift */; };
 		B5FCE5F4221F0DD2001FFC66 /* LineUpNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F3221F0DD2001FFC66 /* LineUpNetworkManager.swift */; };
-		B5FCE5F6221F0FEB001FFC66 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F5221F0FEB001FFC66 /* PlayerModel.swift */; };
+		B5FCE5F6221F0FEB001FFC66 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F5221F0FEB001FFC66 /* Player.swift */; };
 		B5FCE5FA22205B1C001FFC66 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */; };
 		B5FCE5FC222066CB001FFC66 /* LineUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FB222066CB001FFC66 /* LineUpView.swift */; };
 		B5FCE5FE222068DD001FFC66 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */; };
@@ -107,7 +107,7 @@
 		B5FCE5EF221F0B6B001FFC66 /* LineupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupController.swift; sourceTree = "<group>"; };
 		B5FCE5F1221F0CB4001FFC66 /* RosterEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEndPoint.swift; sourceTree = "<group>"; };
 		B5FCE5F3221F0DD2001FFC66 /* LineUpNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpNetworkManager.swift; sourceTree = "<group>"; };
-		B5FCE5F5221F0FEB001FFC66 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		B5FCE5F5221F0FEB001FFC66 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		B5FCE5FB222066CB001FFC66 /* LineUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpView.swift; sourceTree = "<group>"; };
 		B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -312,7 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				B5FCE5EF221F0B6B001FFC66 /* LineupController.swift */,
-				B5FCE5F5221F0FEB001FFC66 /* PlayerModel.swift */,
+				B5FCE5F5221F0FEB001FFC66 /* Player.swift */,
 				B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */,
 				B5FCE5FB222066CB001FFC66 /* LineUpView.swift */,
 			);
@@ -506,7 +506,7 @@
 				B5FCEEED222372A2001FFC66 /* TeamsNetworkManager.swift in Sources */,
 				B5FCE5DB221E67DB001FFC66 /* NetworkRouter.swift in Sources */,
 				B5FCE5F4221F0DD2001FFC66 /* LineUpNetworkManager.swift in Sources */,
-				B5FCE5F6221F0FEB001FFC66 /* PlayerModel.swift in Sources */,
+				B5FCE5F6221F0FEB001FFC66 /* Player.swift in Sources */,
 				B5FCE6072220A1FC001FFC66 /* TeamsController.swift in Sources */,
 				B5FCE5F0221F0B6B001FFC66 /* LineupController.swift in Sources */,
 				B5FCE5FA22205B1C001FFC66 /* PlayerCell.swift in Sources */,

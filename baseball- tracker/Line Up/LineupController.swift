@@ -13,10 +13,9 @@ class LineUpController: UIViewController {
     weak var coordinator: MainCoordiantor?
     
     private var players: [Player] = []
-    
     private var lineUpView = LineUpView()
 
-    private let networkManager: LineUpNetworkManager
+    private var networkManager: LineUpNetworkManager
     private let container: NSPersistentContainer
     
     init(_ networkManager: LineUpNetworkManager, _ container: NSPersistentContainer) {
@@ -32,8 +31,8 @@ class LineUpController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
-//        setupView()
-//        getRoster()
+        setupView()
+        getRoster()
     }
 }
 
@@ -41,7 +40,7 @@ class LineUpController: UIViewController {
 extension LineUpController {
     
     fileprivate func setupView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .teamsBackground
         
         view.addSubview(lineUpView)
         lineUpView.safeAreaFullScreen(to: view)
@@ -51,6 +50,7 @@ extension LineUpController {
     }
     
     fileprivate func getRoster() {
+        networkManager.container = container
         networkManager.getRoster("yankees") { (players, error) in
             if error != nil {
                 print(error as Any)
@@ -58,16 +58,11 @@ extension LineUpController {
             
             if let players = players {
                 self.players = players
+                DispatchQueue.main.async {
+                    self.lineUpView.tableView.reloadData()
+                }
             }
         }
-    }
-}
-
-// MARK: - Target Actions
-extension LineUpController {
-    
-    @objc func submitLineup(_ sender: UIButton) {
-        print("Roster Set")
     }
 }
 
@@ -86,25 +81,39 @@ extension LineUpController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        lineUpView.updateSelected(numSelected)
+        print(numSelected)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let numSelected = tableView.indexPathsForSelectedRows?.count ?? 0
-        lineUpView.updateDeselected(numSelected)
+        print(numSelected)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = .clear
+        return headerView
     }
 }
 
 // MARK: - UITableViewDataSource Methods
 extension LineUpController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return players.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as PlayerCell
-        cell.playerInfo.text = players[indexPath.item].prepareData()
+        cell.playerInfo.text = players[indexPath.section].prepareData()
         return cell
     }
 }

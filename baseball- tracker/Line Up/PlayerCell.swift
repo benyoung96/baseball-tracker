@@ -20,8 +20,10 @@ class PlayerCell: UITableViewCell {
     }
     
     fileprivate func setupView() {
-        addSubview(playerInfo)
+        layer.cornerRadius = 5.0
+        backgroundColor = .lightGray
         
+        addSubview(playerInfo)
         addConstraints([
             playerInfo.centerXAnchor.constraint(equalTo: centerXAnchor),
             playerInfo.centerYAnchor.constraint(equalTo: centerYAnchor)
@@ -31,6 +33,7 @@ class PlayerCell: UITableViewCell {
     let playerInfo: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
         return label
     }()
 }

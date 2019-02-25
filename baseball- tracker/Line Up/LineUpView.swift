@@ -21,22 +21,31 @@ class LineUpView: UIView {
     }
     
     fileprivate func setupViews() {
+        addSubview(title)
+        addSubview(direction)
         addSubview(tableView)
-        addSubview(submit)
         
         addConstraints([
-            tableView.topAnchor.constraint(equalTo: topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            title.topAnchor.constraint(equalTo: topAnchor),
+            title.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            submit.bottomAnchor.constraint(equalTo: bottomAnchor),
-            submit.leadingAnchor.constraint(equalTo: leadingAnchor),
-            submit.trailingAnchor.constraint(equalTo: trailingAnchor),
-            submit.heightAnchor.constraint(equalToConstant: 50),
+            direction.bottomAnchor.constraint(equalTo: bottomAnchor),
+            direction.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            tableView.bottomAnchor.constraint(equalTo: submit.topAnchor)
+            tableView.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 10),
+            tableView.bottomAnchor.constraint(equalTo: direction.topAnchor, constant: -10),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20)
         ])
     }
+    
+    let title: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Choose your Every day line up"
+        label.textColor = .white
+        return label
+    }()
     
     let tableView: UITableView = {
         let tableView = UITableView()
@@ -44,50 +53,16 @@ class LineUpView: UIView {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.allowsMultipleSelection = true
         tableView.allowsMultipleSelectionDuringEditing = true
+        tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
-    let submit: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Select Line up", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .red
-        button.isEnabled = false
-        button.addTarget(self, action: #selector(LineUpController.submitLineup(_:)), for: .touchUpInside)
-        return button
+    let direction: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Swipe left to setup your everyday lineup"
+        label.textColor = .white
+        return label
     }()
-}
-
-// MARK: - Methods to update view
-extension LineUpView {
-    
-    private func enableSubmit() {
-        submit.isEnabled = true
-    }
-    
-    private func disableSubmit() {
-        submit.isEnabled = false
-    }
-    
-    private func updateSubmitText(_ text: String) {
-        submit.setTitle(text, for: .normal)
-    }
-    
-    func updateSelected(_ numSelected: Int) {
-        if numSelected > 0 || numSelected < 9 {
-            updateSubmitText("Select \(9 - numSelected) more Player(s)")
-        }
-        if numSelected == 9 {
-            enableSubmit()
-            updateSubmitText("Submit Lineup")
-        }
-    }
-    
-    func updateDeselected(_ numSelected: Int) {
-        if numSelected > 0 || numSelected < 9 {
-            disableSubmit()
-            updateSubmitText("Select \(9 - numSelected) more Player(s)")
-        }
-    }
 }
