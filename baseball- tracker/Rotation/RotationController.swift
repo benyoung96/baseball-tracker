@@ -111,9 +111,13 @@ extension RotationController: ControllerType {
 extension RotationController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPitchers.append(pitchers[indexPath.item])
-        let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
-        cell.slot.text = "\(selectedPitchers.count)"
+        if (tableView.indexPathsForSelectedRows?.count ?? 0) < 6 {
+            selectedPitchers.append(pitchers[indexPath.item])
+            let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+            cell.slot.text = "\(selectedPitchers.count)"
+        } else {
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

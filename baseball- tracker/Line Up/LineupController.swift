@@ -118,13 +118,18 @@ extension LineUpController: ControllerType {
 extension LineUpController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPlayers.append(positionPlayers[indexPath.section])
-        let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
-        cell.slot.text = "\(selectedPlayers.count)"
+        if (tableView.indexPathsForSelectedRows?.count ?? 0) < 10 {
+            selectedPlayers.append(positionPlayers[indexPath.section])
+            let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+            cell.slot.text = "\(selectedPlayers.count)"
+        } else {
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
+        print(selectedPlayers)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        selectedPlayers.remove(at: indexPath.section)
+        selectedPlayers.removeLast()
         let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
         cell.slot.text = ""
     }
