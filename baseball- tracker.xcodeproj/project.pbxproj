@@ -52,6 +52,7 @@
 		B5FCEEE522226A55001FFC66 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE422226A55001FFC66 /* TeamCell.swift */; };
 		B5FCEEE722226F46001FFC66 /* TeamsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE622226F46001FFC66 /* TeamsEndPoint.swift */; };
 		B5FCEEEB22236D41001FFC66 /* CodingInfoKey+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */; };
+		B5FCEEED222372A2001FFC66 /* TeamsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEC222372A2001FFC66 /* TeamsNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		B5FCEEE422226A55001FFC66 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		B5FCEEE622226F46001FFC66 /* TeamsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsEndPoint.swift; sourceTree = "<group>"; };
 		B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingInfoKey+Extensions.swift"; sourceTree = "<group>"; };
+		B5FCEEEC222372A2001FFC66 /* TeamsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 				B5FCE5CD221E67DA001FFC66 /* NetworkManager.swift */,
 				B5FCE5E0221E6892001FFC66 /* ScheduleNetworkManager.swift */,
 				B5FCE5F3221F0DD2001FFC66 /* LineUpNetworkManager.swift */,
+				B5FCEEEC222372A2001FFC66 /* TeamsNetworkManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				B5FCE5D7221E67DA001FFC66 /* ParameterEncoding.swift in Sources */,
 				B5FCE6102220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift in Sources */,
 				B5AC24D0221E2FF400DE3DD2 /* MainCoordinator.swift in Sources */,
+				B5FCEEED222372A2001FFC66 /* TeamsNetworkManager.swift in Sources */,
 				B5FCE5DB221E67DB001FFC66 /* NetworkRouter.swift in Sources */,
 				B5FCE5F4221F0DD2001FFC66 /* LineUpNetworkManager.swift in Sources */,
 				B5FCE5F6221F0FEB001FFC66 /* PlayerModel.swift in Sources */,

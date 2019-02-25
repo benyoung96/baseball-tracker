@@ -11,12 +11,13 @@ import CoreData
 
 class TeamsController: UIViewController {
     weak var coordinator: MainCoordiantor?
-    
     private let teamsView = TeamsView()
     
+    private var networkManager: TeamsNetworkManager
     private let container: NSPersistentContainer
     
-    init(_ container: NSPersistentContainer) {
+    init(_ networkManager: TeamsNetworkManager, _ container: NSPersistentContainer) {
+        self.networkManager = networkManager
         self.container = container
         super.init(nibName: nil, bundle: nil)
     }
@@ -28,6 +29,7 @@ class TeamsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        fetchTeams()
     }
 }
 
@@ -44,7 +46,16 @@ extension TeamsController {
     }
     
     fileprivate func fetchTeams() {
-        
+        networkManager.container = container
+        networkManager.getTeams { (teams, error) in
+            if error != nil {
+                print(error as Any)
+            }
+            
+            if let teams = teams {
+                print(teams)
+            }
+        }
     }
 }
 
@@ -52,7 +63,8 @@ extension TeamsController {
 extension TeamsController: ControllerType {
     
     static func create(_ container: NSPersistentContainer) -> UIViewController {
-        let vc = TeamsController(container)
+        let networkManager = TeamsNetworkManager()
+        let vc = TeamsController(networkManager, container)
         return vc
     }
 }

@@ -27,7 +27,7 @@ final class Team: NSManagedObject, Codable {
         guard let codingUserInfoKeyManageObjectContext = CodingUserInfoKey.managedObjectContext,
             let managedObjectContext = decoder.userInfo[codingUserInfoKeyManageObjectContext] as? NSManagedObjectContext,
             let entity = NSEntityDescription.entity(forEntityName: "Team", in: managedObjectContext) else {
-            fatalError("Failed to decode User")
+            fatalError("Failed to decode Team")
         }
         
         self.init(entity: entity, insertInto: managedObjectContext)
