@@ -3,13 +3,13 @@ Baseball tracker is an application that allows a user to keep scoring during a b
 
 ### Development Todo
 - [X] Create OnBoardingController that subclass UIPageViewController that allows for navigation between the Teams, LineUp and Rotation Controllers
+- [X] Create a single UITableViewCell class, TeamsCell and PlayerCell are pratically the same thing
 - [ ] Finish implementation and design of TeamsController
 - [ ] Finish implementation and design of LineUpController
 - [ ] Finish implementation and design of RotationController
 - [ ] Create design for the ScheduleController
 - [ ] Create design for view controller where the scoring will be taking place
 - [ ] Write a generic NetworkManager so I don't have to write the same thing for every network request
-- [ ] Create a generic UITableViewCell, TeamsCell and PlayerCell are pratically the same thing
 
 ### Things I Learn
  - Protocols to improve consistency through the code base
