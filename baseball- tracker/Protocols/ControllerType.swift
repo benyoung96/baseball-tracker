@@ -11,10 +11,6 @@ import CoreData
 
 @objc protocol ControllerType: class {
     
-    /// Factory function for view controller instatiation
-    ///
-    /// - Parameter container: Persistent Core Data Container
-    /// - Returns: View controller of concrete type
     @objc optional static func create(_ container: NSPersistentContainer) -> UIViewController
     
     @objc optional static func create() -> UIViewController

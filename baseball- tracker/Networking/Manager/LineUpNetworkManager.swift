@@ -37,6 +37,7 @@ struct LineUpNetworkManager {
                         let decoder = JSONDecoder()
                         decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedObjectContext
                         let apiReponse = try decoder.decode([Player].self, from: data)
+//                        try self.container?.viewContext.save()
                         completion(apiReponse, nil)
                     } catch {
                         completion(nil, NetworkResponse.unableToDecode.rawValue)

@@ -12,7 +12,7 @@ import CoreData
 class LineUpController: UIViewController {
     weak var coordinator: MainCoordiantor?
     
-    private var players: [Player] = []
+    private var positionPlayers: [Player] = []
     private var lineUpView = LineUpView()
 
     private var networkManager: LineUpNetworkManager
@@ -44,7 +44,7 @@ extension LineUpController {
         
         view.addSubview(lineUpView)
         lineUpView.safeAreaFullScreen(to: view)
-        lineUpView.tableView.registerCell(PlayerCell.self)
+        lineUpView.tableView.registerCell(OnBoardingCell.self)
         lineUpView.tableView.delegate = self
         lineUpView.tableView.dataSource = self
     }
@@ -57,7 +57,7 @@ extension LineUpController {
             }
             
             if let players = players {
-                self.players = players
+                self.positionPlayers = players.filter{ $0.position != "P" }
                 DispatchQueue.main.async {
                     self.lineUpView.tableView.reloadData()
                 }
@@ -104,7 +104,7 @@ extension LineUpController: UITableViewDelegate {
 extension LineUpController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return players.count
+        return positionPlayers.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,8 +112,8 @@ extension LineUpController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as PlayerCell
-        cell.playerInfo.text = players[indexPath.section].prepareData()
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as OnBoardingCell
+        cell.title.text = positionPlayers[indexPath.section].prepareData()
         return cell
     }
 }

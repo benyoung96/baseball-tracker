@@ -62,7 +62,14 @@ extension Player {
 
 extension Player: Managed {
     
+    static var defaultPredicates: NSCompoundPredicate? {
+        let team = UserConfig().getFavoriteTeam() ?? ""
+        let teamPredicate = NSPredicate(format: "team == %@", team)
+        let positionPredicate = NSPredicate(format: "positon != 'P'")
+        return NSCompoundPredicate(type: .and, subpredicates: [teamPredicate, positionPredicate])
+    }
+    
     static var defaultSortDescriptors: [NSSortDescriptor] {
-        return [NSSortDescriptor(key: #keyPath(team), ascending: true)]
+        return [NSSortDescriptor(key: #keyPath(firstName), ascending: true)]
     }
 }

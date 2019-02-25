@@ -1,14 +1,14 @@
 //
-//  TeamCell.swift
+//  OnBoardingCell.swift
 //  baseball- tracker
 //
-//  Created by Ben Young on 2/23/19.
+//  Created by Ben Young on 2/24/19.
 //  Copyright © 2019 Ben Young. All rights reserved.
 //
 
 import UIKit
 
-class TeamCell: UITableViewCell {
+class OnBoardingCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,14 +23,14 @@ class TeamCell: UITableViewCell {
         layer.cornerRadius = 5.0
         backgroundColor = .lightGray
         
-        addSubview(team)
+        addSubview(title)
         addConstraints([
-            team.centerXAnchor.constraint(equalTo: centerXAnchor),
-            team.centerYAnchor.constraint(equalTo: centerYAnchor)
+            title.centerXAnchor.constraint(equalTo: centerXAnchor),
+            title.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
     
-    let team: UILabel = {
+    let title: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white

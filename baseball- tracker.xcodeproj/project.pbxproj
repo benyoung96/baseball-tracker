@@ -36,7 +36,6 @@
 		B5FCE5F2221F0CB4001FFC66 /* RosterEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F1221F0CB4001FFC66 /* RosterEndPoint.swift */; };
 		B5FCE5F4221F0DD2001FFC66 /* LineUpNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F3221F0DD2001FFC66 /* LineUpNetworkManager.swift */; };
 		B5FCE5F6221F0FEB001FFC66 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F5221F0FEB001FFC66 /* Player.swift */; };
-		B5FCE5FA22205B1C001FFC66 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */; };
 		B5FCE5FC222066CB001FFC66 /* LineUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FB222066CB001FFC66 /* LineUpView.swift */; };
 		B5FCE5FE222068DD001FFC66 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */; };
 		B5FCE6072220A1FC001FFC66 /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6062220A1FC001FFC66 /* TeamsController.swift */; };
@@ -49,10 +48,10 @@
 		B5FCE61A2220DA09001FFC66 /* RotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6192220DA09001FFC66 /* RotationController.swift */; };
 		B5FCEEE122226473001FFC66 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE022226473001FFC66 /* TeamsView.swift */; };
 		B5FCEEE3222269E0001FFC66 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE2222269E0001FFC66 /* UIColor+Extensions.swift */; };
-		B5FCEEE522226A55001FFC66 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE422226A55001FFC66 /* TeamCell.swift */; };
 		B5FCEEE722226F46001FFC66 /* TeamsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE622226F46001FFC66 /* TeamsEndPoint.swift */; };
 		B5FCEEEB22236D41001FFC66 /* CodingInfoKey+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */; };
 		B5FCEEED222372A2001FFC66 /* TeamsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEC222372A2001FFC66 /* TeamsNetworkManager.swift */; };
+		B5FCEEF0222392BB001FFC66 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEF222392BB001FFC66 /* OnBoardingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +107,6 @@
 		B5FCE5F1221F0CB4001FFC66 /* RosterEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEndPoint.swift; sourceTree = "<group>"; };
 		B5FCE5F3221F0DD2001FFC66 /* LineUpNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpNetworkManager.swift; sourceTree = "<group>"; };
 		B5FCE5F5221F0FEB001FFC66 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		B5FCE5FB222066CB001FFC66 /* LineUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpView.swift; sourceTree = "<group>"; };
 		B5FCE5FD222068DD001FFC66 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B5FCE6062220A1FC001FFC66 /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
@@ -121,10 +119,10 @@
 		B5FCE6192220DA09001FFC66 /* RotationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationController.swift; sourceTree = "<group>"; };
 		B5FCEEE022226473001FFC66 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
 		B5FCEEE2222269E0001FFC66 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		B5FCEEE422226A55001FFC66 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		B5FCEEE622226F46001FFC66 /* TeamsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsEndPoint.swift; sourceTree = "<group>"; };
 		B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingInfoKey+Extensions.swift"; sourceTree = "<group>"; };
 		B5FCEEEC222372A2001FFC66 /* TeamsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsNetworkManager.swift; sourceTree = "<group>"; };
+		B5FCEEEF222392BB001FFC66 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,7 +311,6 @@
 			children = (
 				B5FCE5EF221F0B6B001FFC66 /* LineupController.swift */,
 				B5FCE5F5221F0FEB001FFC66 /* Player.swift */,
-				B5FCE5F922205B1C001FFC66 /* PlayerCell.swift */,
 				B5FCE5FB222066CB001FFC66 /* LineUpView.swift */,
 			);
 			path = "Line Up";
@@ -324,7 +321,6 @@
 			children = (
 				B5FCE6062220A1FC001FFC66 /* TeamsController.swift */,
 				B5FCEEE022226473001FFC66 /* TeamsView.swift */,
-				B5FCEEE422226A55001FFC66 /* TeamCell.swift */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -350,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				B5FCE6162220D3DD001FFC66 /* OnBoardingController.swift */,
+				B5FCEEEF222392BB001FFC66 /* OnBoardingCell.swift */,
 			);
 			path = "On Boarding";
 			sourceTree = "<group>";
@@ -498,6 +495,7 @@
 				B5FCE6172220D3DD001FFC66 /* OnBoardingController.swift in Sources */,
 				B5FCE5FC222066CB001FFC66 /* LineUpView.swift in Sources */,
 				B5AC24CB221E2F4400DE3DD2 /* Coordinator.swift in Sources */,
+				B5FCEEF0222392BB001FFC66 /* OnBoardingCell.swift in Sources */,
 				B5FCE5F2221F0CB4001FFC66 /* RosterEndPoint.swift in Sources */,
 				B5FCE5E6221E70C4001FFC66 /* ScheduleCell.swift in Sources */,
 				B5FCE5D7221E67DA001FFC66 /* ParameterEncoding.swift in Sources */,
@@ -509,7 +507,6 @@
 				B5FCE5F6221F0FEB001FFC66 /* Player.swift in Sources */,
 				B5FCE6072220A1FC001FFC66 /* TeamsController.swift in Sources */,
 				B5FCE5F0221F0B6B001FFC66 /* LineupController.swift in Sources */,
-				B5FCE5FA22205B1C001FFC66 /* PlayerCell.swift in Sources */,
 				B5FCE5FE222068DD001FFC66 /* UIView+Extensions.swift in Sources */,
 				B5AC249B221E28E100DE3DD2 /* ScheduleController.swift in Sources */,
 				B5FCE5DE221E67DB001FFC66 /* Router.swift in Sources */,
@@ -527,7 +524,6 @@
 				B5FCEEE3222269E0001FFC66 /* UIColor+Extensions.swift in Sources */,
 				B5FCE6142220D23D001FFC66 /* UserConfig.swift in Sources */,
 				B5AC24CD221E2F9B00DE3DD2 /* ControllerType.swift in Sources */,
-				B5FCEEE522226A55001FFC66 /* TeamCell.swift in Sources */,
 				B5FCEEE122226473001FFC66 /* TeamsView.swift in Sources */,
 				B5FCE61A2220DA09001FFC66 /* RotationController.swift in Sources */,
 				B5FCE5DD221E67DB001FFC66 /* HttpMethod.swift in Sources */,
