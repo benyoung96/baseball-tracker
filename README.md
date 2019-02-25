@@ -9,6 +9,7 @@ Baseball tracker is an application that allows a user to keep scoring during a b
 - [ ] Create design for the ScheduleController
 - [ ] Create design for view controller where the scoring will be taking place
 - [ ] Write a generic NetworkManager so I don't have to write the same thing for every network request
+- [ ] Create a generic UITableViewCell, TeamsCell and PlayerCell are pratically the same thing
 
 ### Things I Learn
  - Protocols to improve consistency through the code base
