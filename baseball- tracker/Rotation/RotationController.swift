@@ -44,6 +44,11 @@ class RotationController: UIViewController {
             self.team = team.last
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        Pitcher.saveRotation(into: container.viewContext, pitchers: pitchers, selected: &selectedPitchers, team: team!)
+    }
 }
 
 // MARK: - Private Methods
@@ -69,29 +74,6 @@ extension RotationController {
                 DispatchQueue.main.async {
                     self.rotationView.tableView.reloadData()
                 }
-            }
-        }
-    }
-    
-    fileprivate func saveRotation() {
-        for player in pitchers {
-            let contains = selectedPitchers.contains { (selectedPitcher) -> Bool in
-                if selectedPitcher.number == player.number {
-                    return true
-                } else {
-                    return false
-                }
-            }
-            if !contains {
-                selectedPitchers.append(player)
-            }
-        }
-        
-        for (index, player) in selectedPitchers.enumerated() {
-            if index <= 4 {
-                _ = Pitcher.insert(into: container.viewContext, player: player, team: team!, rotationPosition: Int16(index + 1))
-            } else {
-                _ = Pitcher.insert(into: container.viewContext, player: player, team: team!, rotationPosition: 0)
             }
         }
     }

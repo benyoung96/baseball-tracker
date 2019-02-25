@@ -17,7 +17,7 @@ final class PositionPlayer: NSManagedObject {
     @NSManaged fileprivate(set) var position: String
     @NSManaged fileprivate(set) var team: Team
     
-    static func insert(into context: NSManagedObjectContext, player: Player, team: Team, lineUpPosition: Int16) -> PositionPlayer {
+    private static func insert(into context: NSManagedObjectContext, player: Player, team: Team, lineUpPosition: Int16) -> PositionPlayer {
         let positionPlayer: PositionPlayer = context.insertObject()
         positionPlayer.firstName = player.firstName
         positionPlayer.lastName = player.lastName
@@ -26,6 +26,29 @@ final class PositionPlayer: NSManagedObject {
         positionPlayer.lineUpPosition = lineUpPosition
         positionPlayer.team = team
         return positionPlayer
+    }
+    
+    static func saveLineUp(into context: NSManagedObjectContext, players: [Player], selected: inout [Player], team: Team) {
+        for player in players {
+            let contains = selected.contains { (selectedPlayer) -> Bool in
+                if selectedPlayer.number == player.number {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            if !contains {
+                selected.append(player)
+            }
+        }
+        
+        for (index, player) in selected.enumerated() {
+            if index <= 8 {
+                _ = PositionPlayer.insert(into: context, player: player, team: team, lineUpPosition: Int16(index + 1))
+            } else {
+                _ = PositionPlayer.insert(into: context, player: player, team: team, lineUpPosition: 0)
+            }
+        }
     }
 }
 

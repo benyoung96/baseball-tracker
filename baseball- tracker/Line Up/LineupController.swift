@@ -48,7 +48,7 @@ class LineUpController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        saveLineUp()
+        PositionPlayer.saveLineUp(into: container.viewContext, players: positionPlayers, selected: &selectedPlayers, team: team!)
     }
 }
 
@@ -79,29 +79,6 @@ extension LineUpController {
             }
         }
     }
-    
-    fileprivate func saveLineUp() {
-        for player in positionPlayers {
-            let contains = selectedPlayers.contains { (selectedPlayer) -> Bool in
-                if selectedPlayer.number == player.number {
-                    return true
-                } else {
-                    return false
-                }
-            }
-            if !contains {
-                selectedPlayers.append(player)
-            }
-        }
-        
-        for (index, player) in selectedPlayers.enumerated() {
-            if index <= 8 {
-                _ = PositionPlayer.insert(into: container.viewContext, player: player, team: team!, lineUpPosition: Int16(index + 1))
-            } else {
-                _ = PositionPlayer.insert(into: container.viewContext, player: player, team: team!, lineUpPosition: 0)
-            }
-        }
-    }
 }
 
 // MARK: - ControllerType Methods
@@ -125,7 +102,6 @@ extension LineUpController: UITableViewDelegate {
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
         }
-        print(selectedPlayers)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
