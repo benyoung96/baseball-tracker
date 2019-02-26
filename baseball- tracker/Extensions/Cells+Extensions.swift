@@ -9,3 +9,5 @@
 import UIKit
 
 extension UITableViewCell: Reusable {}
+
+extension UICollectionViewCell: Reusable {}

@@ -21,20 +21,25 @@ class MainCoordiantor: Coordinator {
     }
     
     func start() {
-        if !userConfig.isFirstBoot() {
-            userConfig.setFirstBootStatus(true)
-            navigationController.isNavigationBarHidden = true
-            showOnBoarding()
-        } else {
-            if let team = userConfig.getFavoriteTeam() {
-                navigationController.isNavigationBarHidden = false
-                showTeamSchedule(team)
-            }
-        }
+        let vc = WelcomeController.create() as! WelcomeController
+        vc.coordinator = self
+        navigationController.isNavigationBarHidden = true
+        navigationController.pushViewController(vc, animated: false)
+        
+//        if !userConfig.isFirstBoot() {
+//            userConfig.setFirstBootStatus(true)
+//            navigationController.isNavigationBarHidden = true
+//            showOnBoarding()
+//        } else {
+//            if let team = userConfig.getFavoriteTeam() {
+//                navigationController.isNavigationBarHidden = false
+//                showTeamSchedule(team)
+//            }
+//        }
     }
     
     func showOnBoarding() {
-        let vc = OnBoardingController.create() as! OnBoardingController
+        let vc = OnBoardingControllerOld.create() as! OnBoardingControllerOld
         vc.coordinator = self
         vc.pages = getOnBoardingControllers()
         navigationController.pushViewController(vc, animated: false)
