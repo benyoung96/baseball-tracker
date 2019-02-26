@@ -21,7 +21,7 @@ extension ScheduleEndPoint: EndPointType {
     var path: String {
         switch self {
         case .getGames(let team):
-            return "api/\(team)/games"
+            return "api/\(team)/schedule"
         }
     }
     

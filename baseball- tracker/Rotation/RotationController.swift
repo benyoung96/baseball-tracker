@@ -79,6 +79,15 @@ extension RotationController {
     }
 }
 
+// MARK: - Target Action Methods
+extension RotationController {
+    
+    @objc func submitLineUpRotation(_ sender: UIButton) {
+        print("Submited line up and rotation")
+        coordinator?.popOnBoarding(team?.name ?? "")
+    }
+}
+
 // MARK: - ControllerType Methods
 extension RotationController: ControllerType {
     

@@ -22,7 +22,7 @@ extension UserConfig {
         return firstBoot
     }
     
-    func setFirstBootFalse(_ firstBoot: Bool) {
+    func setFirstBootStatus(_ firstBoot: Bool) {
         UserDefaults.standard.set(firstBoot, forKey: firstBootKey)
         UserDefaults.standard.synchronize()
     }

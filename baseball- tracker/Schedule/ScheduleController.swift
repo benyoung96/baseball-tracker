@@ -47,7 +47,8 @@ extension ScheduleController {
     }
     
     fileprivate func getSchedule() {
-        networkManager.getSchedule("yankees") { (schedule, error) in
+        let team = UserConfig().getFavoriteTeam() ?? ""
+        networkManager.getSchedule(team) { (schedule, error) in
             if error != nil {
                 print(error as Any)
             }
@@ -75,7 +76,7 @@ extension ScheduleController: ControllerType {
 extension ScheduleController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.showRoster()
+        print("Tapped a game")
     }
 }
 

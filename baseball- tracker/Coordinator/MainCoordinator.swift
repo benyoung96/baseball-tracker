@@ -22,6 +22,7 @@ class MainCoordiantor: Coordinator {
     
     func start() {
         if !userConfig.isFirstBoot() {
+            userConfig.setFirstBootStatus(true)
             navigationController.isNavigationBarHidden = true
             showOnBoarding()
         } else {
@@ -43,7 +44,13 @@ class MainCoordiantor: Coordinator {
         let teams = TeamsController.create(container) as! TeamsController
         let lineUp = LineUpController.create(container) as! LineUpController
         let rotation = RotationController.create(container) as! RotationController
+        rotation.coordinator = self
         return [teams, lineUp, rotation]
+    }
+    
+    func popOnBoarding(_ team: String) {
+        navigationController.popToRootViewController(animated: false)
+        showTeamSchedule(team)
     }
     
     func showTeamSchedule(_ team: String) {

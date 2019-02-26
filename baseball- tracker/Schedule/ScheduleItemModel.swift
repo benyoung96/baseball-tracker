@@ -11,7 +11,6 @@ import Foundation
 struct ScheduleItem: Codable {
     let home: String
     let away: String
-    let dayOfWeek: String
     let datetime: String
     
     func prepareData() -> (String, String) {

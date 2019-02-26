@@ -31,6 +31,8 @@ class RotationView: UIView {
             
             direction.bottomAnchor.constraint(equalTo: bottomAnchor),
             direction.centerXAnchor.constraint(equalTo: centerXAnchor),
+            direction.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
+            direction.heightAnchor.constraint(equalToConstant: 50),
             
             tableView.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 10),
             tableView.bottomAnchor.constraint(equalTo: direction.topAnchor, constant: -10),
@@ -58,11 +60,12 @@ class RotationView: UIView {
         return tableView
     }()
     
-    let direction: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Swipe left to setup your everyday lineup"
-        label.textColor = .white
-        return label
+    let direction: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Submit", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(RotationController.submitLineUpRotation(_:)), for: .touchUpInside)
+        return button
     }()
 }
