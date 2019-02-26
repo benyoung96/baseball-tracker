@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class OnBoardingController: UIPageViewController {
+class OnBoardingControllerOld: UIPageViewController {
     weak var coordinator: MainCoordiantor?
     var pages: [UIViewController]?
     
@@ -30,7 +30,7 @@ class OnBoardingController: UIPageViewController {
 }
 
 // MARK: - Private Methods
-extension OnBoardingController {
+extension OnBoardingControllerOld {
     
     fileprivate func setupControllers() {
         if let firstVC = pages?.first {
@@ -40,21 +40,21 @@ extension OnBoardingController {
 }
 
 // MARK: - ControllerType Methods
-extension OnBoardingController: ControllerType {
+extension OnBoardingControllerOld: ControllerType {
     
     static func create() -> UIViewController {
-        let vc = OnBoardingController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        let vc = OnBoardingControllerOld(transitionStyle: .scroll, navigationOrientation: .horizontal)
         return vc
     }
 }
 
 // MARK: - UIPageViewControllerDelegate
-extension OnBoardingController: UIPageViewControllerDelegate {
+extension OnBoardingControllerOld: UIPageViewControllerDelegate {
     
 }
 
 // MARK: - UIPageViewControllerDataSource
-extension OnBoardingController: UIPageViewControllerDataSource {
+extension OnBoardingControllerOld: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let index = pages?.firstIndex(of: viewController) else {

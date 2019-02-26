@@ -16,3 +16,10 @@ extension Reusable where Self: UITableViewCell {
         return String(describing: self)
     }
 }
+
+extension Reusable where Self: UICollectionViewCell {
+    
+    static var reuseId: String {
+        return String(describing: self)
+    }
+}
