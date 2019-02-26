@@ -13,4 +13,8 @@ extension UIColor  {
     static let main = UIColor(red:0.16, green:0.18, blue:0.20, alpha:1.0)
     static let offWhite = UIColor(red:0.76, green:0.76, blue:0.76, alpha:1.0)
     
+    static let welcomeBackground = UIColor(red:0.00, green:0.49, blue:0.64, alpha:1.0)
+    static let welcomeGray = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.0)
+    static let welcomeDarkGray = UIColor(red:0.68, green:0.68, blue:0.68, alpha:1.0)
+    
 }
