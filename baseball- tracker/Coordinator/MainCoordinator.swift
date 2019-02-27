@@ -40,7 +40,8 @@ class MainCoordiantor: Coordinator {
     }
     
     func popWelcome() {
-        navigationController.popToRootViewController(animated: false)
+        navigationController.isNavigationBarHidden = false
+        navigationController.popViewController(animated: false)
         showTeamSchedule()
     }
     
@@ -62,7 +63,7 @@ class MainCoordiantor: Coordinator {
     func showTeamSchedule() {
         let vc = ScheduleController.create(container) as! ScheduleController
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+        navigationController.initRootController(vc: vc)
     }
     
     func showRoster() {

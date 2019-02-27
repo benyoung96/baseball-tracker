@@ -13,4 +13,9 @@ extension UINavigationController {
     override open var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    func initRootController(vc: UIViewController) {
+        viewControllers.removeAll()
+        pushViewController(vc, animated: false)
+    }
 }
