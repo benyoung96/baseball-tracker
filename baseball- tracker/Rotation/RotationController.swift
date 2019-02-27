@@ -58,7 +58,7 @@ extension RotationController {
         view.backgroundColor = .main
         view.addSubview(rotationView)
         rotationView.safeAreaFullScreen(to: view)
-        rotationView.tableView.registerCell(OnBoardingCell.self)
+        rotationView.tableView.registerCell(SetupCell.self)
         rotationView.tableView.delegate = self
         rotationView.tableView.dataSource = self
     }
@@ -84,7 +84,6 @@ extension RotationController {
     
     @objc func submitLineUpRotation(_ sender: UIButton) {
         print("Submited line up and rotation")
-        coordinator?.popOnBoarding(team?.name ?? "")
     }
 }
 
@@ -104,7 +103,7 @@ extension RotationController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView.indexPathsForSelectedRows?.count ?? 0) < 6 {
             selectedPitchers.append(pitchers[indexPath.item])
-            let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+            let cell: SetupCell = tableView.cellForRow(at: indexPath) as! SetupCell
             cell.slot.text = "\(selectedPitchers.count)"
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
@@ -113,7 +112,7 @@ extension RotationController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         selectedPitchers.remove(at: indexPath.item)
-        let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+        let cell: SetupCell = tableView.cellForRow(at: indexPath) as! SetupCell
         cell.slot.text = ""
     }
     
@@ -140,7 +139,7 @@ extension RotationController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as OnBoardingCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SetupCell
         cell.title.text = pitchers[indexPath.section].prepareData()
         return cell
     }

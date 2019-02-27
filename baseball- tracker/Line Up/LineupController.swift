@@ -60,7 +60,7 @@ extension LineUpController {
         
         view.addSubview(lineUpView)
         lineUpView.safeAreaFullScreen(to: view)
-        lineUpView.tableView.registerCell(OnBoardingCell.self)
+        lineUpView.tableView.registerCell(SetupCell.self)
         lineUpView.tableView.delegate = self
         lineUpView.tableView.dataSource = self
     }
@@ -97,7 +97,7 @@ extension LineUpController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView.indexPathsForSelectedRows?.count ?? 0) < 10 {
             selectedPlayers.append(positionPlayers[indexPath.section])
-            let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+            let cell: SetupCell = tableView.cellForRow(at: indexPath) as! SetupCell
             cell.slot.text = "\(selectedPlayers.count)"
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
@@ -106,7 +106,7 @@ extension LineUpController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         selectedPlayers.removeLast()
-        let cell: OnBoardingCell = tableView.cellForRow(at: indexPath) as! OnBoardingCell
+        let cell: SetupCell = tableView.cellForRow(at: indexPath) as! SetupCell
         cell.slot.text = ""
     }
     
@@ -133,7 +133,7 @@ extension LineUpController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as OnBoardingCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SetupCell
         cell.title.text = positionPlayers[indexPath.section].prepareData()
         return cell
     }

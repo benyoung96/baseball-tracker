@@ -12,6 +12,7 @@ import CoreData
 class ScheduleController: UITableViewController {
     weak var coordinator: MainCoordiantor?
     
+    private let scheduleView = ScheduleView()
     private var scheduleItems: [ScheduleItem] = []
     
     private var networkManager: ScheduleNetworkManager
@@ -29,9 +30,9 @@ class ScheduleController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTableView()
-        getSchedule()
+        setupViews()
+        checkForFavoriteTeam()
     }
 }
 
@@ -44,6 +45,21 @@ extension ScheduleController {
         tableView.dataSource = self
         tableView.rowHeight = 60
         tableView.tableFooterView = UIView(frame: .zero)
+    }
+    
+    fileprivate func setupViews() {
+        view.addSubview(scheduleView)
+        scheduleView.safeAreaFullScreen(to: view)
+        scheduleView.isHidden = true
+    }
+    
+    fileprivate func checkForFavoriteTeam() {
+        print(UserConfig().getFavoriteTeam() as Any)
+        if let _ = UserConfig().getFavoriteTeam() {
+            getSchedule()
+        } else {
+            scheduleView.isHidden = false
+        }
     }
     
     fileprivate func getSchedule() {
@@ -59,6 +75,14 @@ extension ScheduleController {
                 }
             }
         }
+    }
+}
+
+// MARK: - Target Actions
+extension ScheduleController {
+    
+    @objc func selectFavoriteTeam(_ sender: UIButton) {
+        print("select favorite team")
     }
 }
 

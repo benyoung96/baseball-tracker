@@ -11,6 +11,7 @@ import UIKit
 class WelcomeController: UICollectionViewController {
     weak var coordinator: MainCoordiantor?
     private let welcomeView = WelcomeView()
+    private var currentPage: Int?
     
     override init(collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: layout)
@@ -68,6 +69,9 @@ extension WelcomeController: ControllerType {
 extension WelcomeController {
     
     @objc func next(_ sender: UIButton) {
+        if welcomeView.pageControl.currentPage == 2 || currentPage == 2 {
+            coordinator?.popWelcome()
+        }
         let nextIndex = min(welcomeView.pageControl.currentPage + 1, 2)
         let indexPath = IndexPath(item: nextIndex, section: 0)
         welcomeView.pageControl.currentPage = nextIndex
@@ -75,6 +79,7 @@ extension WelcomeController {
     }
     
     @objc func previous(_ sender: UIButton) {
+        print(welcomeView.pageControl.currentPage)
         let previousIndex = max(welcomeView.pageControl.currentPage - 1, 0)
         let indexPath = IndexPath(item: previousIndex, section: 0)
         welcomeView.pageControl.currentPage = previousIndex
@@ -87,6 +92,7 @@ extension WelcomeController {
     
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let x = targetContentOffset.pointee.x / view.frame.width
+        currentPage = Int(x)
         welcomeView.pageControl.currentPage = Int(x)
     }
 }

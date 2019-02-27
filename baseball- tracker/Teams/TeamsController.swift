@@ -48,7 +48,7 @@ extension TeamsController {
         view.backgroundColor = .main
         view.addSubview(teamsView)
         teamsView.safeAreaFullScreen(to: view)
-        teamsView.tableView.registerCell(OnBoardingCell.self)
+        teamsView.tableView.registerCell(SetupCell.self)
         teamsView.tableView.delegate = self
         teamsView.tableView.dataSource = self
     }
@@ -124,7 +124,7 @@ extension TeamsController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as OnBoardingCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SetupCell
         cell.title.text = teams[indexPath.section].prepareForView()
         return cell
     }

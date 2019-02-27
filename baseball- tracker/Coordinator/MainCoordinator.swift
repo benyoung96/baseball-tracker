@@ -21,31 +21,37 @@ class MainCoordiantor: Coordinator {
     }
     
     func start() {
+        userConfig.setFirstBootStatus(false)
+        if !userConfig.isFirstBoot() {
+            userConfig.setFirstBootStatus(true)
+            navigationController.isNavigationBarHidden = true
+            showWelcome()
+        } else {
+            navigationController.isNavigationBarHidden = false
+            showTeamSchedule()
+        }
+    }
+    
+    func showWelcome() {
         let vc = WelcomeController.create() as! WelcomeController
         vc.coordinator = self
         navigationController.isNavigationBarHidden = true
         navigationController.pushViewController(vc, animated: false)
-        
-//        if !userConfig.isFirstBoot() {
-//            userConfig.setFirstBootStatus(true)
-//            navigationController.isNavigationBarHidden = true
-//            showOnBoarding()
-//        } else {
-//            if let team = userConfig.getFavoriteTeam() {
-//                navigationController.isNavigationBarHidden = false
-//                showTeamSchedule(team)
-//            }
-//        }
     }
     
-    func showOnBoarding() {
-        let vc = OnBoardingControllerOld.create() as! OnBoardingControllerOld
+    func popWelcome() {
+        navigationController.popToRootViewController(animated: false)
+        showTeamSchedule()
+    }
+    
+    func showSetup() {
+        let vc = SetupController.create() as! SetupController
         vc.coordinator = self
-        vc.pages = getOnBoardingControllers()
+        vc.pages = setupControllers()
         navigationController.pushViewController(vc, animated: false)
     }
     
-    private func getOnBoardingControllers() -> [UIViewController] {
+    private func setupControllers() -> [UIViewController] {
         let teams = TeamsController.create(container) as! TeamsController
         let lineUp = LineUpController.create(container) as! LineUpController
         let rotation = RotationController.create(container) as! RotationController
@@ -53,14 +59,8 @@ class MainCoordiantor: Coordinator {
         return [teams, lineUp, rotation]
     }
     
-    func popOnBoarding(_ team: String) {
-        navigationController.popToRootViewController(animated: false)
-        showTeamSchedule(team)
-    }
-    
-    func showTeamSchedule(_ team: String) {
+    func showTeamSchedule() {
         let vc = ScheduleController.create(container) as! ScheduleController
-        vc.navigationItem.title = team
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }

@@ -24,8 +24,14 @@ class WelcomeCell: UICollectionViewCell {
     fileprivate func setupViews() {
         addSubview(titleLabel)
         addSubview(descriptionLabel)
+        addSubview(image)
         
         addConstraints([
+            image.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 25),
+            image.centerXAnchor.constraint(equalTo: centerXAnchor),
+            image.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.75),
+            image.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.75),
+            
             titleLabel.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 65),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
@@ -34,6 +40,13 @@ class WelcomeCell: UICollectionViewCell {
             descriptionLabel.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor, multiplier: 0.75)
         ])
     }
+    
+    let image: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(named: "main")
+        return imageView
+    }()
     
     let titleLabel: UILabel = {
         let label = UILabel()

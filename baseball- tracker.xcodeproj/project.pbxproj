@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5220B982226269E008B9F92 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5220B972226269E008B9F92 /* ScheduleView.swift */; };
 		B5AC2499221E28E100DE3DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC2498221E28E100DE3DD2 /* AppDelegate.swift */; };
 		B5AC249B221E28E100DE3DD2 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC249A221E28E100DE3DD2 /* ScheduleController.swift */; };
 		B5AC24A1221E28E100DE3DD2 /* baseball__tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5AC249F221E28E100DE3DD2 /* baseball__tracker.xcdatamodeld */; };
@@ -17,7 +18,7 @@
 		B5AC24CB221E2F4400DE3DD2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC24CA221E2F4400DE3DD2 /* Coordinator.swift */; };
 		B5AC24CD221E2F9B00DE3DD2 /* ControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC24CC221E2F9B00DE3DD2 /* ControllerType.swift */; };
 		B5AC24D0221E2FF400DE3DD2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC24CF221E2FF400DE3DD2 /* MainCoordinator.swift */; };
-		B5FCE5C8221E675D001FFC66 /* ScheduleItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5C7221E675D001FFC66 /* ScheduleItemModel.swift */; };
+		B5FCE5C8221E675D001FFC66 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5C7221E675D001FFC66 /* ScheduleItem.swift */; };
 		B5FCE5D7221E67DA001FFC66 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5CB221E67DA001FFC66 /* ParameterEncoding.swift */; };
 		B5FCE5D8221E67DA001FFC66 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5CD221E67DA001FFC66 /* NetworkManager.swift */; };
 		B5FCE5DA221E67DA001FFC66 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE5D1221E67DA001FFC66 /* ParameterEncoder.swift */; };
@@ -44,7 +45,7 @@
 		B5FCE60E2220B139001FFC66 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE60D2220B139001FFC66 /* Managed.swift */; };
 		B5FCE6102220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE60F2220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift */; };
 		B5FCE6142220D23D001FFC66 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6132220D23D001FFC66 /* UserConfig.swift */; };
-		B5FCE6172220D3DD001FFC66 /* OnBoardingControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6162220D3DD001FFC66 /* OnBoardingControllerOld.swift */; };
+		B5FCE6172220D3DD001FFC66 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6162220D3DD001FFC66 /* SetupController.swift */; };
 		B5FCE61A2220DA09001FFC66 /* RotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCE6192220DA09001FFC66 /* RotationController.swift */; };
 		B5FCEEE122226473001FFC66 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE022226473001FFC66 /* TeamsView.swift */; };
 		B5FCEEE3222269E0001FFC66 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEE2222269E0001FFC66 /* UIColor+Extensions.swift */; };
@@ -52,7 +53,7 @@
 		B5FCEEEB22236D41001FFC66 /* CodingInfoKey+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */; };
 		B5FCEEED222372A2001FFC66 /* TeamsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEEC222372A2001FFC66 /* TeamsNetworkManager.swift */; };
 		B5FCEEF222239A61001FFC66 /* RotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEF122239A61001FFC66 /* RotationView.swift */; };
-		B5FCEEFF2223B81D001FFC66 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEFE2223B81D001FFC66 /* OnBoardingCell.swift */; };
+		B5FCEEFF2223B81D001FFC66 /* SetupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEEFE2223B81D001FFC66 /* SetupCell.swift */; };
 		B5FCEF0822244D6E001FFC66 /* Pitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEF0722244D6E001FFC66 /* Pitcher.swift */; };
 		B5FCEF0A22244D80001FFC66 /* PositionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEF0922244D80001FFC66 /* PositionPlayer.swift */; };
 		B5FCEF0F222503F3001FFC66 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FCEF0E222503F3001FFC66 /* WelcomeCell.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5220B972226269E008B9F92 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		B5AC2495221E28E100DE3DD2 /* baseball- tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "baseball- tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AC2498221E28E100DE3DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5AC249A221E28E100DE3DD2 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
@@ -96,7 +98,7 @@
 		B5AC24CA221E2F4400DE3DD2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B5AC24CC221E2F9B00DE3DD2 /* ControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerType.swift; sourceTree = "<group>"; };
 		B5AC24CF221E2FF400DE3DD2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		B5FCE5C7221E675D001FFC66 /* ScheduleItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemModel.swift; sourceTree = "<group>"; };
+		B5FCE5C7221E675D001FFC66 /* ScheduleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
 		B5FCE5CB221E67DA001FFC66 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		B5FCE5CD221E67DA001FFC66 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B5FCE5D1221E67DA001FFC66 /* ParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -123,7 +125,7 @@
 		B5FCE60D2220B139001FFC66 /* Managed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
 		B5FCE60F2220BEC5001FFC66 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
 		B5FCE6132220D23D001FFC66 /* UserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
-		B5FCE6162220D3DD001FFC66 /* OnBoardingControllerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingControllerOld.swift; sourceTree = "<group>"; };
+		B5FCE6162220D3DD001FFC66 /* SetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
 		B5FCE6192220DA09001FFC66 /* RotationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationController.swift; sourceTree = "<group>"; };
 		B5FCEEE022226473001FFC66 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
 		B5FCEEE2222269E0001FFC66 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -131,7 +133,7 @@
 		B5FCEEEA22236D41001FFC66 /* CodingInfoKey+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingInfoKey+Extensions.swift"; sourceTree = "<group>"; };
 		B5FCEEEC222372A2001FFC66 /* TeamsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsNetworkManager.swift; sourceTree = "<group>"; };
 		B5FCEEF122239A61001FFC66 /* RotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationView.swift; sourceTree = "<group>"; };
-		B5FCEEFE2223B81D001FFC66 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
+		B5FCEEFE2223B81D001FFC66 /* SetupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCell.swift; sourceTree = "<group>"; };
 		B5FCEF0722244D6E001FFC66 /* Pitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitcher.swift; sourceTree = "<group>"; };
 		B5FCEF0922244D80001FFC66 /* PositionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPlayer.swift; sourceTree = "<group>"; };
 		B5FCEF0E222503F3001FFC66 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
@@ -166,6 +168,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5220B9B22262C49008B9F92 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCEF13222511B8001FFC66 /* WelcomeController.swift */,
+				B5FCEF1922251C5A001FFC66 /* WelcomeView.swift */,
+				B5FCEF0E222503F3001FFC66 /* WelcomeCell.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		B5AC248C221E28E100DE3DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				B5AC24CE221E2FE700DE3DD2 /* Coordinator */,
-				B5FCE6152220D3C7001FFC66 /* On Boarding */,
+				B5220B9B22262C49008B9F92 /* Welcome */,
+				B5FCE6152220D3C7001FFC66 /* Setup */,
 				B5FCE6052220A1E1001FFC66 /* Teams */,
 				B5FCE5EE221F0B2A001FFC66 /* Line Up */,
 				B5FCE6182220D9F3001FFC66 /* Rotation */,
@@ -250,8 +263,9 @@
 			isa = PBXGroup;
 			children = (
 				B5AC249A221E28E100DE3DD2 /* ScheduleController.swift */,
-				B5FCE5C7221E675D001FFC66 /* ScheduleItemModel.swift */,
+				B5FCE5C7221E675D001FFC66 /* ScheduleItem.swift */,
 				B5FCE5E5221E70C4001FFC66 /* ScheduleCell.swift */,
+				B5220B972226269E008B9F92 /* ScheduleView.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -354,16 +368,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B5FCE6152220D3C7001FFC66 /* On Boarding */ = {
+		B5FCE6152220D3C7001FFC66 /* Setup */ = {
 			isa = PBXGroup;
 			children = (
-				B5FCE6162220D3DD001FFC66 /* OnBoardingControllerOld.swift */,
-				B5FCEEFE2223B81D001FFC66 /* OnBoardingCell.swift */,
-				B5FCEF13222511B8001FFC66 /* WelcomeController.swift */,
-				B5FCEF1922251C5A001FFC66 /* WelcomeView.swift */,
-				B5FCEF0E222503F3001FFC66 /* WelcomeCell.swift */,
+				B5FCE6162220D3DD001FFC66 /* SetupController.swift */,
+				B5FCEEFE2223B81D001FFC66 /* SetupCell.swift */,
 			);
-			path = "On Boarding";
+			path = Setup;
 			sourceTree = "<group>";
 		};
 		B5FCE6182220D9F3001FFC66 /* Rotation */ = {
@@ -508,8 +519,8 @@
 				B5FCE5DF221E67DB001FFC66 /* EndPointType.swift in Sources */,
 				B5FCEEF222239A61001FFC66 /* RotationView.swift in Sources */,
 				B5FCE5D8221E67DA001FFC66 /* NetworkManager.swift in Sources */,
-				B5FCE5C8221E675D001FFC66 /* ScheduleItemModel.swift in Sources */,
-				B5FCE6172220D3DD001FFC66 /* OnBoardingControllerOld.swift in Sources */,
+				B5FCE5C8221E675D001FFC66 /* ScheduleItem.swift in Sources */,
+				B5FCE6172220D3DD001FFC66 /* SetupController.swift in Sources */,
 				B5FCE5FC222066CB001FFC66 /* LineUpView.swift in Sources */,
 				B5AC24CB221E2F4400DE3DD2 /* Coordinator.swift in Sources */,
 				B5FCE5F2221F0CB4001FFC66 /* RosterEndPoint.swift in Sources */,
@@ -528,7 +539,7 @@
 				B5FCEF162225131B001FFC66 /* UICollectionView+Extensions.swift in Sources */,
 				B5AC249B221E28E100DE3DD2 /* ScheduleController.swift in Sources */,
 				B5FCE5DE221E67DB001FFC66 /* Router.swift in Sources */,
-				B5FCEEFF2223B81D001FFC66 /* OnBoardingCell.swift in Sources */,
+				B5FCEEFF2223B81D001FFC66 /* SetupCell.swift in Sources */,
 				B5FCE60A2220AA14001FFC66 /* Team.swift in Sources */,
 				B5FCE5E1221E6892001FFC66 /* ScheduleNetworkManager.swift in Sources */,
 				B5FCEEEB22236D41001FFC66 /* CodingInfoKey+Extensions.swift in Sources */,
@@ -540,6 +551,7 @@
 				B5FCEEE722226F46001FFC66 /* TeamsEndPoint.swift in Sources */,
 				B5FCE60C2220ACC6001FFC66 /* DataStack.swift in Sources */,
 				B5FCEF0F222503F3001FFC66 /* WelcomeCell.swift in Sources */,
+				B5220B982226269E008B9F92 /* ScheduleView.swift in Sources */,
 				B5FCE5DA221E67DA001FFC66 /* ParameterEncoder.swift in Sources */,
 				B5FCE5E8221E7CD4001FFC66 /* Resuable.swift in Sources */,
 				B5FCE5ED221E7E5A001FFC66 /* UITableView+Extensions.swift in Sources */,
