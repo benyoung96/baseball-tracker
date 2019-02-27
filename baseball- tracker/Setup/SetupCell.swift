@@ -21,7 +21,7 @@ class SetupCell: UITableViewCell {
     
     fileprivate func setupViews() {
         layer.cornerRadius = 5.0
-        backgroundColor = .lightGray
+        backgroundColor = .welcomeGray
         
         addSubview(title)
         addSubview(slot)

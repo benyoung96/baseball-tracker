@@ -18,4 +18,12 @@ extension UINavigationController {
         viewControllers.removeAll()
         pushViewController(vc, animated: false)
     }
+    
+    func style() {
+        navigationBar.isTranslucent = false
+        navigationBar.barTintColor = .welcomeBackground
+        navigationBar.tintColor = .white
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationBar.titleTextAttributes = textAttributes
+    }
 }

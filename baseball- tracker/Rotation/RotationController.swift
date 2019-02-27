@@ -55,7 +55,7 @@ class RotationController: UIViewController {
 extension RotationController {
     
     fileprivate func setupViews() {
-        view.backgroundColor = .main
+        view.backgroundColor = .welcomeBackground
         view.addSubview(rotationView)
         rotationView.safeAreaFullScreen(to: view)
         rotationView.tableView.registerCell(SetupCell.self)
@@ -83,7 +83,7 @@ extension RotationController {
 extension RotationController {
     
     @objc func submitLineUpRotation(_ sender: UIButton) {
-        print("Submited line up and rotation")
+        coordinator?.popSetup()
     }
 }
 

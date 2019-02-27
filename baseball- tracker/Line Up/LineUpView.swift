@@ -43,7 +43,7 @@ class LineUpView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Choose your Every day line up"
-        label.textColor = .white
+        label.textColor = .welcomeGray
         return label
     }()
     
@@ -62,7 +62,7 @@ class LineUpView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Swipe left to setup your everyday lineup"
-        label.textColor = .white
+        label.textColor = .welcomeGray
         return label
     }()
 }

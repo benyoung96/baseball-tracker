@@ -22,6 +22,7 @@ class MainCoordiantor: Coordinator {
     
     func start() {
         userConfig.setFirstBootStatus(false)
+        userConfig.saveFavoriteTeam(nil)
         if !userConfig.isFirstBoot() {
             userConfig.setFirstBootStatus(true)
             navigationController.isNavigationBarHidden = true
@@ -49,6 +50,7 @@ class MainCoordiantor: Coordinator {
         let vc = SetupController.create() as! SetupController
         vc.coordinator = self
         vc.pages = setupControllers()
+        navigationController.isNavigationBarHidden = true
         navigationController.pushViewController(vc, animated: false)
     }
     
@@ -60,9 +62,15 @@ class MainCoordiantor: Coordinator {
         return [teams, lineUp, rotation]
     }
     
+    func popSetup() {
+        navigationController.isNavigationBarHidden = false
+        navigationController.popViewController(animated: true)
+    }
+    
     func showTeamSchedule() {
         let vc = ScheduleController.create(container) as! ScheduleController
         vc.coordinator = self
+        navigationController.style()
         navigationController.initRootController(vc: vc)
     }
     

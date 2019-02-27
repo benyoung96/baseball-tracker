@@ -56,7 +56,7 @@ class LineUpController: UIViewController {
 extension LineUpController {
     
     fileprivate func setupView() {
-        view.backgroundColor = .main
+        view.backgroundColor = .welcomeBackground
         
         view.addSubview(lineUpView)
         lineUpView.safeAreaFullScreen(to: view)

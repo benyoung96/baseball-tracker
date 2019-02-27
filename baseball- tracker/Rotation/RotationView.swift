@@ -45,7 +45,7 @@ class RotationView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Choose your Rotation"
-        label.textColor = .white
+        label.textColor = .welcomeGray
         return label
     }()
     
@@ -64,7 +64,7 @@ class RotationView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Submit", for: .normal)
-        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.welcomeGray, for: .normal)
         button.addTarget(self, action: #selector(RotationController.submitLineUpRotation(_:)), for: .touchUpInside)
         return button
     }()

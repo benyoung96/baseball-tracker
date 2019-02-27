@@ -33,19 +33,13 @@ class TeamsController: UIViewController {
         setupViews()
         fetchTeams()
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("TeamsView will now be hidden")
-        UserConfig().saveFavoriteTeam(selectedTeam?.name ?? "")
-    }
 }
 
 // MARK: - Private Methods
 extension TeamsController {
     
     fileprivate func setupViews() {
-        view.backgroundColor = .main
+        view.backgroundColor = .welcomeBackground
         view.addSubview(teamsView)
         teamsView.safeAreaFullScreen(to: view)
         teamsView.tableView.registerCell(SetupCell.self)
@@ -90,7 +84,7 @@ extension TeamsController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if selectedTeam == nil {
-            selectedTeam = teams[indexPath.item]
+            UserConfig().saveFavoriteTeam(teams[indexPath.item].name)
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
         }

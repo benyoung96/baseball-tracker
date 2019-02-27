@@ -32,6 +32,10 @@ class ScheduleController: UITableViewController {
         super.viewDidLoad()
         setupTableView()
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         checkForFavoriteTeam()
     }
 }
@@ -55,8 +59,10 @@ extension ScheduleController {
     
     fileprivate func checkForFavoriteTeam() {
         print(UserConfig().getFavoriteTeam() as Any)
-        if let _ = UserConfig().getFavoriteTeam() {
+        if let team = UserConfig().getFavoriteTeam() {
             getSchedule()
+            scheduleView.isHidden = true
+            navigationItem.title = team
         } else {
             scheduleView.isHidden = false
         }
@@ -82,7 +88,7 @@ extension ScheduleController {
 extension ScheduleController {
     
     @objc func selectFavoriteTeam(_ sender: UIButton) {
-        print("select favorite team")
+        coordinator?.showSetup()
     }
 }
 

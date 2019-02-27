@@ -36,7 +36,7 @@ extension UserConfig {
         return team
     }
     
-    func saveFavoriteTeam(_ team: String) {
+    func saveFavoriteTeam(_ team: String?) {
         UserDefaults.standard.set(team, forKey: favoriteTeamKey)
         UserDefaults.standard.synchronize()
     }
